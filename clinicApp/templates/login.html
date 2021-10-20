@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log-In</title>
+    <link rel="stylesheet" href="library/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="css/LS.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/utility.css">
+</head>
+<body>
+
+    <header>
+        <div class="headerContainer" >
+            <a href="index.html"><div id="logo">
+                <img src="images/logo.png" alt="logo" id="logoImage">
+            </div></a>
+            <div id="bankName">
+                <div class="logoText primaryColor">Stephen</div>
+                <div class="logoText secondaryColor">Comercial</div>
+                <div class="logoText primaryColor">Bank</div>
+                <div class="logoText secondaryColor">of</div>
+                <div class="logoText secondaryColor">Commerce</div>
+            </div>
+        </div>
+        <div class="menuContainer">
+            <div id="menu">
+                <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
+                <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+            </div>
+            <div class="navContainer" >
+    
+                <div class="navOptionContainer" id="homeOptionContainer">
+                    <div id="homeOption" class="navOption" onclick="window.open('index.html');">Home</div>
+                    <div id="homeBlock" class="navBlock">
+                        <a href="index.html#wad-content"><div class="navOptionOption" >What is SCBC?</div></a>
+                        <a href="index.html#tc"><div class="navOptionOption">What do we offer?</div></a>
+                        <a href="index.html#c-a-c"><div class="navOptionOption">Contact us</div></a>
+                        <a href="index.html#c-a-c"><div class="navOptionOption">About our bank</div></a>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="loanOptionContainer">
+                    <div id="loanOption" class="navOption" onclick="window.open('loan.html','_self');">Loan</div>
+                    <div id="loanBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Loan Services</div>
+                        <div class="navOptionOption" onclick="window.open('loan.html#latestOffers','_self');">Latest Offers</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="creditCardsOptionContainer">
+                    <div id="creditCardsOption" class="navOption" onclick="window.open('creditCards.html','_self');">Credit Cards</div>
+                    <div id="creditCardsBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Credit Card Services</div>
+                        <div class="navOptionOption" onclick="window.open('creditCards.html#latestOffers','_self');">Latest Offers</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="insuranceOptionContainer">
+                    <div id="insuranceOption" class="navOption" onclick="window.open('insurance.html','_self');">Insurance</div>
+                    <div id="insuranceBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Insurance Services</div>
+                        <div class="navOptionOption" onclick="window.open('insurance.html#latestOffers','_self');">Latest Offers</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="aboutUsOptionContainer">
+                    <div id="aboutUsOption" class="navOption" onclick="window.open('investments.html','_self');">Investments</div>
+                    <div id="aboutUsBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('investments.html#companyOutlook','_self');">Company Outlook</div>
+                        <div class="navOptionOption" onclick="window.open('investments.html#tableChartHeading','_self');">Yearly Report</div>
+                    </div>
+                </div>
+    
+                <div id="loginSignUpContainer">
+                    <div class="navOption pointer" id="loginSignUp" onclick="window.open('login.html','_self');">Login/Sign up</div>
+                    <div class="loginSignUpBlock">
+                        <div class="loginSignUpOption pointer" onclick="window.open('login.html','_self');">Log In</div>
+                        <div class="loginSignUpOption pointer" onclick="window.open('signup.html','_self');">Sign Up</div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+    <div class="contentContainer" style="height: 500px;width: 400px">
+
+        <div class="textImage">
+            <div class="userImageIcon">
+            </div>
+            <div class="primaryColor" style="font-size: 25px;margin-top: 20px;text-decoration: underline;">Log In</div>
+        </div>
+
+        <form class="dataInput" onsubmit="return false">
+            <div class="validationLabel" id="validationLabel"></div>
+
+            <p class="input-container">
+                <input type="email" id="input-email" class="login-input" required>
+                <label for="input-email" unselectable="on" id="label-email">Email*</label>
+            </p>
+
+
+            <p class="input-container">
+                <input type="password" id="input-password" class="login-input" required>
+                <label for="input-password" unselectable="on" id="label-password">Password*</label>
+            </p>
+
+            <input type="submit" name="Sign Up" id="signUpButton" style="margin-top: 100px" onclick="Login()">
+
+
+        </form>
+
+        <div class="loginLine" style="margin-top: 50px">
+            <p style="display: inline;color: #888888">Become a member. </p>
+            <a class="loginButton" href="signup.html" id="loginButton">Sign-Up</a>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="js/LS.js"></script>
+
+</body>
+</html>

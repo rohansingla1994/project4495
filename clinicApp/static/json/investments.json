@@ -1,0 +1,202 @@
+{
+  "2010": {
+    "Walmart": {
+      "Investment": 5478965,
+      "Profit": 123654,
+      "Image": "logos/walmart.png"
+    },
+    "ExxonMobil": {
+      "Investment": 852963,
+      "Profit": 74123,
+      "Image": "logos/exxon.png"
+    },
+    "Apple": {
+      "Investment": 7896544,
+      "Profit": 412369,
+      "Image": "logos/apple.png"
+    }
+  },
+  "2011": {
+    "BerkshireHathaway": {
+      "Investment": 8521344,
+      "Profit": 789654,
+      "Image": "logos/berkshireHathaway.png"
+    },
+    "UnitedHealthGroup": {
+      "Investment": 7412589,
+      "Profit": 74123,
+      "Image": "logos/unitedHealthGroup.png"
+    },
+    "McKesson": {
+      "Investment": 7896541,
+      "Profit": 1236647,
+      "Image": "logos/mckesson.png"
+    }
+  },
+  "2012": {
+    "CVSHealth": {
+      "Investment": 7415856,
+      "Profit": -9874,
+      "Image": "logos/cvsHealth.png"
+    },
+    "AT&T": {
+      "Investment": 7412584,
+      "Profit": 7854126,
+      "Image": "logos/aTT.png"
+    },
+    "AmerisourceBergen": {
+      "Investment": 7412852,
+      "Profit": 12365,
+      "Image": "logos/americanSourceBergen.png"
+    },
+    "Chevron": {
+      "Investment": 54789654,
+      "Profit": 123654,
+      "Image": "logos/chevronCorporation.png"
+    },
+    "FordMotor": {
+      "Investment": 7418529,
+      "Profit": 789456,
+      "Image": "logos/fordCorporation.png"
+    }
+  },
+  "2013": {
+    "GeneralMotors": {
+      "Investment": 8527413,
+      "Profit": 123456,
+      "Image": "logos/generalMotors.png"
+    },
+    "CostcoWholesale": {
+      "Investment": 7418524,
+      "Profit": 524163,
+      "Image": "logos/costcoWholesale.png"
+    },
+    "Alphabet": {
+      "Investment": 8524567,
+      "Profit": -96354,
+      "Image": "logos/alphabet.png"
+    },
+    "CardinalHealth": {
+      "Investment": 7414568,
+      "Profit": 418529,
+      "Image": "logos/cardinalHealth.png"
+    }
+  },
+  "2014": {
+    "JPMorganChase": {
+      "Investment": 1234564,
+      "Profit": 87496,
+      "Image": "logos/jPMorgan.png"
+    },
+    "VerizonCommunications": {
+      "Investment": 7415289,
+      "Profit": 52978,
+      "Image": "logos/verizon.png"
+    },
+    "Kroger": {
+      "Investment": 6385274,
+      "Profit": 25634,
+      "Image": "logos/kroger.png"
+    }
+  },
+  "2015": {
+    "GeneralElectric": {
+      "Investment": 5852456,
+      "Profit": 452136,
+      "Image": "logos/generalElectric.png"
+    },
+    "FannieMae": {
+      "Investment": 1236547,
+      "Profit": 1235,
+      "Image": "logos/fannieMae.png"
+    },
+    "Phillips66": {
+      "Investment": 9638524,
+      "Profit": 12356,
+      "Image": "logos/phillips.png"
+    },
+    "ValeroEnergy": {
+      "Investment": 9634562,
+      "Profit": -96354,
+      "Image": "logos/valero.png"
+    }
+  },
+  "2016": {
+    "BankofAmerica": {
+      "Investment": 9634568,
+      "Profit": 524613,
+      "Image": "logos/bankOfAmerica.png"
+    },
+    "Microsoft": {
+      "Investment": 8524565,
+      "Profit": 123654,
+      "Image": "logos/microsoft.png"
+    },
+    "HomeDepot": {
+      "Investment": 5478965,
+      "Profit": 123654,
+      "Image": "logos/theHomeDepot.png"
+    }
+  },
+  "2017": {
+    "Boeing": {
+      "Investment": 4568523,
+      "Profit": 123354,
+      "Image": "logos/boeing.png"
+    },
+    "WellsFargo": {
+      "Investment": 7415896,
+      "Profit": 456321,
+      "Image": "logos/wellsFargo.png"
+    },
+    "Citigroup": {
+      "Investment": 4563217,
+      "Profit": 415263,
+      "Image": "logos/citi.png"
+    }
+  },
+  "2018": {
+    "MarathonPetroleum": {
+      "Investment": 7418526,
+      "Profit": 963524,
+      "Image": "logos/marathonPetroleum.png"
+    },
+    "Comcast": {
+      "Investment": 8527414,
+      "Profit": 123654,
+      "Image": "logos/comCastCorporation.png"
+    },
+    "Anthem": {
+      "Investment": 9634568,
+      "Profit": 123654,
+      "Image": "logos/anthem.png"
+    },
+    "DellTechnologies": {
+      "Investment": 7414568,
+      "Profit": 456852,
+      "Image": "logos/dellCorporation.png"
+    }
+  },
+  "2019": {
+    "Johnson&Johnson": {
+      "Investment": 7418523,
+      "Profit": 415263,
+      "Image": "logos/johnsonAndJohnson.png"
+    },
+    "IBM": {
+      "Investment": 5241638,
+      "Profit": 741852,
+      "Image": "logos/ibmCorporation.png"
+    },
+    "Target": {
+      "Investment": 7415485,
+      "Profit": 123654,
+      "Image": "logos/target.png"
+    },
+    "FreddieMac": {
+      "Investment": 5478965,
+      "Profit": 123654,
+      "Image": "logos/fannieMae.png"
+    }
+  }
+}

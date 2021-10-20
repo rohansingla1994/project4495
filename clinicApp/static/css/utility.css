@@ -1,0 +1,28 @@
+.primaryColor{
+    color: #C01F31;
+}
+.secondaryColor{
+    color: white;
+}
+.accentColor{
+    color: #333333;
+}
+.backgroundPrimaryColor{
+    background-color: #C01F31;
+}
+.backgroundSecondaryColor{
+    background-color: white;
+}
+.backgroundAccentColor{
+    background-color: #333333;
+}
+.shadow {
+    box-shadow: 5px 5px 5px #000000;
+}
+.pointer{
+    cursor: pointer;
+}
+.underLine{
+    text-decoration: underline;
+}
+

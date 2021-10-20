@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClinicO</title>
+    {% load static %}
+    <link href="{% static 'css/index.css'%}" rel="stylesheet">
+    <link href="{% static 'css/carousel.css'%}" rel="stylesheet">
+    <link href="{% static 'css/header.css'%}" rel="stylesheet">
+    <link href="{% static 'css/utility.css'%}" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="headerContainer" >
+        <a href="index.html"><div id="logo">
+            <img src="{% static 'images/logo.png'%}" alt="logo" id="logoImage">
+        </div></a>
+        <div id="bankName">
+            <div class="logoText primaryColor">ClinicO</div>
+        </div>
+    </div>
+    <div class="menuContainer">
+        <div id="menu">
+            <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
+            <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+        </div>
+        <div class="navContainer" >
+
+            <div class="navOptionContainer" id="homeOptionContainer">
+                <div id="homeOption" class="navOption" onclick="window.open('index.html');">Home</div>
+                <div id="homeBlock" class="navBlock">
+                    <a href="index.html#wad-content"><div class="navOptionOption" >What is SCBC?</div></a>
+                    <a href="index.html#tc"><div class="navOptionOption">What do we offer?</div></a>
+                    <a href="index.html#c-a-c"><div class="navOptionOption">Contact us</div></a>
+                    <a href="index.html#c-a-c"><div class="navOptionOption">About our bank</div></a>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="loanOptionContainer">
+                <div id="loanOption" class="navOption" onclick="window.open('loan.html','_self');">Loan</div>
+                <div id="loanBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Loan Services</div>
+                    <div class="navOptionOption" onclick="window.open('loan.html#latestOffers','_self');">Latest Offers</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="creditCardsOptionContainer">
+                <div id="creditCardsOption" class="navOption" onclick="window.open('creditCards.html','_self');">Credit Cards</div>
+                <div id="creditCardsBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Credit Card Services</div>
+                    <div class="navOptionOption" onclick="window.open('creditCards.html#latestOffers','_self');">Latest Offers</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="insuranceOptionContainer">
+                <div id="insuranceOption" class="navOption" onclick="window.open('insurance.html','_self');">Insurance</div>
+                <div id="insuranceBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Insurance Services</div>
+                    <div class="navOptionOption" onclick="window.open('insurance.html#latestOffers','_self');">Latest Offers</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="aboutUsOptionContainer">
+                <div id="aboutUsOption" class="navOption" onclick="window.open('investments.html','_self');">Investments</div>
+                <div id="aboutUsBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('investments.html#companyOutlook','_self');">Company Outlook</div>
+                    <div class="navOptionOption" onclick="window.open('investments.html#tableChartHeading','_self');">Yearly Report</div>
+                </div>
+            </div>
+
+            <div id="loginSignUpContainer">
+                <div class="navOption pointer" id="loginSignUp" onclick="window.open('login.html','_self');">Login/Sign up</div>
+                <div class="loginSignUpBlock">
+                    <div class="loginSignUpOption pointer" onclick="window.open('login.html','_self');">Log In</div>
+                    <div class="loginSignUpOption pointer" onclick="window.open('signup.html','_self');">Sign Up</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<slides>
+    <div class="slideshow-container">
+
+
+        <div class="mySlides fade">
+            <img src="https://source.unsplash.com/1600x900/?downtown" style="width:100%; height:430px;object-fit: cover;">\
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://source.unsplash.com/1600x900/?skyline" style="width:100%;height:430px;object-fit: cover;">
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://source.unsplash.com/1600x900/?highrise" style="width:100%;height:430px;object-fit: cover;">
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <script src="js/carousel.js"></script>
+
+
+</slides>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000);
+    }
+</script>
+
+<section class="w-a-d default-grid">
+    <div class="wad-content" id="wad-content">
+        <div class="h2">ClinicO</div>
+        <div class="columns">A Bank for the people. We provide all services like Loan , Insurance , Credit cards at affordable Rates
+            We aim at bridging the gap between technology and the Customer and build non breakable relationships. Come and become part of the revolution   </div>
+    </div>
+
+</section>
+
+<section class="tech-cards default-grid" id="tc">
+    <div class="tc-content">
+
+            <div onclick="window.open('loan.html');" class="tech-card">
+                <img src="{% static 'images/i1.jpg'%}" alt="i1">
+                <h3>Loans</h3>
+                <p>Loans are provided at attractive rate of interest and just a click of button. Please click further for details of EMI's. Get a free
+                    transfer of loans.
+                </p>
+            </div>
+
+
+            <div onclick="window.open('creditCards.html');" class="tech-card">
+                <img src="{% static 'images/i2.jpg'%}" alt="i2">
+                <h3>Credit cards</h3>
+                <p>Apply for a credit card just a click away and explore the range of features and services,
+                    Our cards work everywhere around the world and offer the best Cross Currency conversion rates in the market.
+                </p>
+            </div>
+
+
+            <div onclick="window.open('insurance.html');" class="tech-card">
+                <img src="{% static 'images/i3.jpg'%}" alt="i3">
+                <h3>Insurance</h3>
+                <p>We care for the disasters. Come and Plan to avoid last time surprises. Give a call and we will take care of 
+                    virtually everything for you.
+                </p>
+            </div>
+
+    </div>
+
+</section>
+
+<section class="w-h-n default-grid">
+    <div class="whn-content">
+        <h2>We handle all of your Banking needs</h2>
+        <p>Come and Join the revolution of interprenaurs. You join us and we promise we will take care of you.<br>
+        We have every service that you need in the Financial Management. </p>
+    </div>
+
+</section>
+
+<section class="c-a-c" id="c-a-c">
+    <div class="c-us">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum. - CEO and Founder<br><br>
+        </p>
+        <p>contact@stephencommercialbank.ca</p>
+    </div>
+    <div class="a-o-c">
+        <h2>About Our Company</h2>
+        <p>Launched in the year 2008 with a aim to revolutionise the Banking industry we slowly became market leader in this field. 
+            Launched by two IT Enterprenaurs to provide affordable banking, it soon took over Market giants and became a market leader
+            in North America and later penetrated into Latin America as well
+        </p>
+    </div>
+</section>
+
+
+<footer style="display: flex;justify-content: center;align-items: center;">
+    
+    <div >
+        <a href="#">SCBC &copy; </a>
+        <p>All rights reserved</p>
+        
+    </div>
+</footer>
+
+</body>
+</html>

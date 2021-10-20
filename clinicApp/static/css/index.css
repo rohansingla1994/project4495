@@ -1,0 +1,217 @@
+html {
+    height: 100%;
+    max-width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.default-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 460px)) 1fr;
+}
+
+slides {
+    height: 430px;
+    background: #333333;
+    /*changed*/
+    padding: 0;
+}
+
+.w-a-d {
+    background-color: #eeeeee;
+}
+
+section > .wad-content {
+    opacity: .8;
+    grid-row: 1;
+    grid-column: 2/4;
+    padding: 30px 25px 30px 25px;
+}
+
+section > .wad-content > .h2 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+section > .wad-content > .columns {
+    column-count: 2;
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: center;
+
+}
+
+.tech-cards {
+    background-color: #333333;
+    max-height: 567px;
+    padding: 35px 25px 35px 25px;
+    text-align: center;
+}
+
+.tc-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 100%;
+    grid-row: 1;
+    grid-column: 2/4;
+    grid-gap: 15px;
+    padding: 0 30px 0 30px;
+
+}
+
+.tech-card:hover{
+    box-shadow: 5px 5px 5px #000000;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.tech-cards .tc-content div {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+.tech-cards .tc-content div img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tech-cards .tc-content div h3 {
+    font-size: 21px;
+    font-weight: 600;
+    padding: 40px 20px 14px 20px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.tech-cards .tc-content div p {
+    font-size: 18px;
+    padding: 35px 30px 35px 30px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.w-h-n .whn-content {
+    grid-column: 2/4;
+    grid-row: 1;
+    text-align: center;
+    color: #333333;
+    padding: 40px 0 40px 0;
+}
+
+.w-h-n .whn-content p {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.c-a-c{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    background-color: #333333;
+    color: #FFFFFF;
+
+}
+.c-a-c div p{
+    font-size: 18px;
+    padding: 15px 0 15px 0;
+}
+.c-a-c div h2{
+padding-bottom: 10px;
+}
+.c-us{
+    background-color: #C01F31;
+    padding: 30px;
+}
+.a-o-c{
+    padding: 30px;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:#000000;
+    color: #FFFFFF;
+    text-align: center;
+    align-content: center;
+    font-size: 18px;
+    padding: 30px 0 30px 0;
+}
+footer div p{
+    display: inline;
+
+}
+footer div a{
+    text-decoration: none;
+    color: #C01F31;
+}
+
+@media only screen and (max-width: 975px) {
+.tc-content div {
+    height: 400px;
+}
+    .tc-content div p {
+        font-size: 15px;
+        padding: 25px 20px 25px 20px;
+        line-height: 15px;
+        margin: 0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    .tc-content div {
+        height: 300px;
+    }
+    .tc-content div p {
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 760px) {
+    .tech-cards{
+        max-height: 1000px ;
+    }
+    .tc-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .tc-content div {
+        height: 300px;
+        width: 250px;
+        margin-bottom: 30px;
+    }
+    .tc-content div p {
+        display: none;
+    }
+    .tc-content div img {
+        height: 250px;
+        width: 250px;
+    }
+    .tc-content div h3 {
+        font-size: 15px;
+        font-weight: 600;
+        padding: 20px;
+        margin: 0;
+    }
+    #tc{
+        display: flex;
+        justify-content: center;
+    }
+    .c-a-c{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+

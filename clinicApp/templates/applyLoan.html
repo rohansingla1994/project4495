@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" type="text/css" href="css/loan.css">
+    <link rel="stylesheet" type="text/css" href="css/loggedInHeader.css">
+    <script src="js/storage.js">
+    
+    </script>
+    <script>
+        function checkLogin() {
+    var status=sessionStorage.getItem("currentUser");
+    if(status===null){
+        alert("You need to login first!!");
+        window.open('login.html','_self');
+    }
+}
+    </script>
+
+    <style>
+      tr:nth-of-type(odd) {
+      background-color:#ccc;
+    }
+    
+    
+    </style>
+
+    <script>
+        checkLogin();
+             var interest=0;
+             var tenure=0;
+             var a=0;
+             var payment=0;
+             var balance=0;
+
+     function userValidation(){
+
+        var bol=true;
+
+        var validate=document.getElementById("loan").value;
+        var tenurevalidate=document.getElementById("tenure").value;
+
+        if(validate==""&& tenurevalidate==""){
+            document.getElementById("validation").innerHTML="Please Enter the Loan Amount and tenure";
+                    bol=true;
+
+        }
+
+
+        else{
+            
+            document.getElementById("validation").innerHTML="";
+            bol=false;
+        }
+        return bol;
+     }
+    
+    
+
+     function selectLoan(inter){
+
+        if(inter===16){
+            document.getElementById("genderButton").innerHTML="Personal";
+        }
+        if(inter===12){
+            document.getElementById("genderButton").innerHTML="Car";
+        }
+        if(inter===15){
+            document.getElementById("genderButton").innerHTML="Education";
+        }
+        if(inter===11){
+            document.getElementById("genderButton").innerHTML="Home";
+        }
+
+       
+
+        
+        
+            interest=inter;
+
+
+            
+              
+
+        }
+
+        
+        function applyLoan()
+        
+        {
+            
+            if(getTotalDebt()!==0)
+            {
+                alert("Sorry!! Our Policies dictate only one loan at a time. Clear your Debt First");
+                return;
+            }
+
+            compute();
+
+            var d= document.getElementById("loan").value;
+
+            setInterestRate(interest);
+            setLoanTenure(tenure);
+            setInstallment(parseInt(payment.toFixed(2)));
+            setTotalDebt(parseInt(d));
+
+            document.getElementById("validation").innerHTML="Congratulations!! Loan Successfully Applied "
+            document.getElementById("validation").style.color="#66ff22";
+            
+
+
+
+
+        }
+
+      
+        
+
+        
+      function compute(){
+
+       
+        if (userValidation()==false){
+
+
+        
+
+
+
+            interest=interest+getInterestRateFactor();
+        var interestcomponent=interest;
+
+     //var c = b.options[b.selectedIndex].value;
+
+     var rs=0;
+     var repayment=0;
+     var repayment1=0;
+  
+
+ 
+        a = parseFloat(document.getElementById("loan").value);
+
+        document.getElementById('loanmoney').innerHTML="$"+a;
+        
+        tenure=parseInt(document.getElementById("tenure").value);
+        var rateofinterest=interest/100.0
+        var monthly=rateofinterest/12;
+         payment = a * (monthly/(1-Math.pow(
+        1+monthly, -tenure)));
+             
+         
+         
+        var result="<table border='1'><tr><th class='primaryColor backgroundAccentColor'>Month #</th><th class='primaryColor backgroundAccentColor'>Balance</th>" + 
+        "<th class='primaryColor backgroundAccentColor'>Interest</th><th class='primaryColor backgroundAccentColor'>Principal</th>";
+         
+           
+           for(var count=0;count<tenure;++count)
+           {
+
+         
+            var monthlyprincipal=0;
+            result += "<tr align=center class='table100-head'>";
+            result += "<td>" + (count + 1) + "</td>";
+            result += "<td> $" + a.toFixed(2) + "</td>";
+            interestcomponent = a * monthly;
+            result += "<td> $" + interestcomponent.toFixed(2) + "</td>";
+            monthlyPrincipal = payment - interestcomponent;
+            result += "<td> $" + monthlyPrincipal.toFixed(2) + "</td>";
+            result += "</tr>";
+            a = a - monthlyPrincipal;
+
+
+           }
+
+          console.log(a);
+          
+           result += "</table>";
+           document.getElementById("loanInterest").innerHTML=interest.toFixed(2)+" "+"%";
+           document.getElementById("loanInstallment").innerHTML="$"+payment.toFixed(2);
+           
+           document.getElementById("output").innerHTML=result;
+              
+
+         
+
+       
+
+     
+    }
+
+
+
+
+      }
+
+
+       
+
+    </script>
+</head>
+<body class="">
+    <header>
+        <div class="headerContainer">
+            <a href="dashBoard.html">
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo" id="logoImage">
+                </div>
+            </a>
+            <div id="bankName">
+                <div class="logoText primaryColor">Stephen</div>
+                <div class="logoText secondaryColor">Comercial</div>
+                <div class="logoText primaryColor">Bank</div>
+                <div class="logoText secondaryColor">of</div>
+                <div class="logoText secondaryColor">Commerce</div>
+            </div>
+        </div>
+        <div class="menuContainer">
+            <div id="menu">
+                <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
+                <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+            </div>
+            <div class="navContainer">
+    
+                <div class="navOptionContainer" id="homeOptionContainer">
+                    <div id="homeOption" class="navOption" onclick="window.open('dashBoard.html','_self');">Home</div>
+                </div>
+    
+                <div class="navOptionContainer" id="loanOptionContainer">
+                    <div id="loanOption" class="navOption" onclick="window.open('applyLoan.html','_self');">Loan</div>
+                    <div id="loanBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('applyLoan.html','_self');">Apply Loan</div>
+                        <div class="navOptionOption" onclick="window.open('payInstallment.html','_self');">Pay Installment</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="applyLoanOptionContainer">
+                    <div id="applyLoanOption" class="navOption" onclick="window.open('applyLoan.html','_self');">Apply Loan</div>
+                </div>
+                <div class="navOptionContainer" id="payInstallmentOptionContainer">
+                    <div id="payInstallmentOption" class="navOption" onclick="window.open('payInstallment.html','_self');">Pay Installment
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="creditScoreOptionContainer">
+                    <div id="creditScoreOption" class="navOption" onclick="window.open('creditScore.html');">Credit Score</div>
+                </div>
+    
+                <div id="logoutContainer">
+                    <div class="navOption pointer" id="logout" onclick="window.open('index.html','_self'); sessionStorage.clear();">Logout</div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </header>
+
+<div id="content">
+
+
+<div class="mainHeading">
+    Apply Loan
+</div>
+
+  <div id="whole" class="complete">
+      <div class="subHeading">
+
+    
+            Calculate your EMI below 
+  
+      </div>
+
+ 
+    <div class="applyLoan">
+        <div class="calculator">
+
+     
+
+
+            
+            
+        
+                
+
+                <div class="inputs">
+                    <div class="in">
+
+
+                   
+                    <label class="cs">
+                        Loan Amount
+                    </label>
+                    
+            
+                     
+                        <input type="number" id="loan" class="textClass" required style="color: white;" >
+
+                    </div>
+        
+                    <div class="in">
+                        
+          
+                        <div id="gender">
+                            <div id="genderButton">Loan Type</div>
+                            <div id="genderBlock">
+                                <div class="genderOption" onclick="selectLoan(12)">Car</div>
+                                <div class="genderOption" onclick="selectLoan(16)">Personal</div>
+                                <div class="genderOption" onclick="selectLoan(15)">Education</div>
+                                <div class="genderOption" onclick="selectLoan(11)">Home</div>
+
+        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="in">
+
+                    
+        
+                        <label class="cs">
+                            Loan Tenure
+                        </label>
+                        <input type="number" id="tenure"  style="margin-left: 64px; color: white;" class="textClass" required>
+
+                    </div>
+                        
+        
+
+
+                </div>
+                
+                <div class="comp-al-buttons">
+                    <div onclick="compute()" class="button caButtons"> Compute</div>
+
+                    <div class="button caButtons" onclick="applyLoan()">
+                        Apply Loan
+                    </div>
+
+                </div>
+            
+
+        </div>
+ 
+        <div>
+
+            <label id="validation" style="color:red;margin-left: 20%;">
+
+            </label>
+        </div>
+    
+
+    
+    
+    
+    <div>
+
+        <div class="headingIcon">
+            Your Loan Details Below
+        </div>
+
+    <div class="loanDataDetails">   
+        <div class="loanData">
+            <img src="images/loanmoney.png" class="loanDataImage">
+            <div id="loanmoney" class="loanDataData">
+              Prinicpal
+    
+            </div>
+            
+        </div>
+    
+        <div class="loanData">
+            <img src="images/emi.png" class="loanDataImage">
+            <div id="loanInterest" class="loanDataData">
+                Interest
+            </div>
+        </div>
+    
+        <div class="loanData">
+            <img src="images/emi_icon.png" class="loanDataImage" >
+            <div id="loanInstallment"class="loanDataData">
+                EMI
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="validat">
+        <label id="validation">
+
+        </label>
+
+
+    </div>
+   
+    
+    
+    
+</div>
+
+<div class="headingIcon">
+    Mortrage Schedule 
+</div>
+    
+    <div id="output" class="output1">
+    
+
+    </div>
+    </div>
+
+</div>
+</div>
+
+    
+    
+</body>
+</html>

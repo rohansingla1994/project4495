@@ -1,0 +1,89 @@
+*{
+    color: white;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+
+}
+.heading1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#mainHeading{
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 2px solid #28a2a2;
+}
+#contentContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Main Content Container Style*/
+#mainContentContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 30px 0 0 15px;
+    padding: 0 20px 0 20px;
+}
+#mainContentContainer .heading1{
+    justify-content: flex-start;
+    border-bottom: 1px solid #CCCCCC;
+}
+#creditScore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    width: 100%;
+
+}
+#mainContentContainer .additionalInfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#mainContentContainer .additionalInfo > div{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    flex-grow: 1;
+    margin-top: 20px;
+}
+#data-status{
+    font-weight: 300;
+    margin-left: 50px;
+}
+#data-interestRate{
+    font-weight: 300;
+    margin-left: 50px;
+}
+
+@media only screen and (max-width: 1245px) {
+
+
+}
+@media only screen and (max-width: 1000px) {
+
+}
+@media only screen and (max-width: 835px) {
+    #contentContainer{
+        flex-direction: column;
+        justify-items: center;
+    }
+    #mainContentContainer{
+        width: 385px;
+        min-width: 345px;
+        margin: 20px 0 0 0 ;
+    }
+}

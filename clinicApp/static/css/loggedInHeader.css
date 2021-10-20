@@ -1,0 +1,340 @@
+html {
+    height: 100%;
+    max-width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 160px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.headerContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 110px;
+    border-bottom: 1px solid white;
+}
+
+#logo {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+#logoImage {
+    height: 90px;
+    width: 90px;
+}
+
+#bankName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logoText {
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+#menu {
+    display: none;
+}
+
+.menuButton {
+    height: 30px;
+    width: 30px;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.navOptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+}
+
+.navOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 10px 0 10px 0;
+    height: 30px;
+    width: 111px;
+    padding: 0 20px 0 20px;
+    border-right: 1px solid white;
+    cursor: pointer;
+}
+
+.navOption:hover {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: #333333;
+    background-color: white;
+    font-size: 18px;
+    height: 47px;
+    padding: 0 20px 0 20px;
+    border-bottom: 3px solid #333333;
+    transition: 0.5s;
+}
+
+.navBlock {
+    margin: 49px 0 0 0;
+}
+
+.navOptionOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 152px;
+    height: 50px;
+    font-size: 13px;
+    background-color: #333333;
+    color: white;
+    border-bottom: 1px solid #717171;
+    cursor: pointer;
+}
+
+.navOptionOption:hover {
+    font-size: 15px;
+    background-color: white;
+    color: #333333;
+    border-top: 1px solid #333333;
+    transition: 0.3s;
+}
+
+.navOptionOption:active {
+    width: 160px;
+    color: #28a2a2;
+    transition: 0.3s;
+}
+
+
+/*Home Option Hover*/
+
+#homeBlock {
+    display: none;
+    z-index: 1;
+    position: absolute;
+}
+
+#homeOptionContainer:hover #homeBlock {
+    display: block;
+}
+
+/*Loan Option Hover*/
+
+#loanBlock {
+    display: none;
+    z-index: 1;
+    position: absolute;
+}
+
+#loanOptionContainer:hover #loanBlock {
+    display: block;
+}
+
+/*Apply Loan Option*/
+
+#applyLoanOptionContainer{
+    display: none;
+}
+
+/*Pay Installment Option*/
+
+#payInstallmentOptionContainer{
+    display: none;
+}
+
+/*Login/SignUp Option Hover*/
+
+
+#logoutContainer {
+    width: 213px;
+}
+
+#logout {
+    margin: 0 30px 0 30px;
+    border: 1px solid white;
+}
+
+#logoutContainer:hover #logout {
+    border-top: 6px solid #333333;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px 0 20px;
+    height: 44px;
+    width: 130px;
+    background-color: white;
+    color: #333333;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 975px) {
+
+    .navOption {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .navOption:hover {
+        font-size: 14px;
+    }
+
+    .navOptionOption {
+        width: 121px;
+        font-size: 10px;
+    }
+
+    .navOptionOption:hover {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+
+    header {
+        height: 144px;
+    }
+
+    .headerContainer{
+        height: 93px;
+    }
+
+    #bankName {
+        margin-left: 15px;
+    }
+
+    .logoText {
+        font-size: 21px;
+        margin-right: 7px;
+    }
+
+    #logo {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        border: 1px solid white;
+    }
+
+    #logoImage {
+        height: 70px;
+        width: 70px;
+    }
+
+    .menuContainer{
+        z-index: 1;
+    }
+
+    #menu {
+        display: flex;
+        height: 50px;
+        width: 50px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+    }
+
+    .menuContainer:hover #menu{
+        background-color: white;
+        border-bottom: none;
+    }
+
+    #menuActive {
+        display: none;
+    }
+
+    .menuContainer:hover #menuInActive {
+        display: none;
+    }
+
+    .menuContainer:hover #menuActive {
+        display: block
+    }
+
+    .menuContainer:hover .navContainer{
+        display: flex;
+    }
+
+    .navContainer {
+        display: none;
+        height: 200px;
+        z-index: 1;
+        flex-direction: column;
+        background-color: #333333;
+    }
+
+    #menu:hover .navContainer {
+        display: none;
+    }
+
+    .navOptionContainer {
+        width: 100%;
+    }
+
+    .navOption {
+        border-right: none;
+        border-bottom: 1px solid #717171;
+        width: 150px;
+        height: 50px;
+        margin: 0;
+    }
+
+    .navBlock {
+        visibility: hidden;
+    }
+
+    #applyLoanOptionContainer{
+        display: flex;
+    }
+    #payInstallmentOptionContainer{
+        display: flex;
+    }
+    #loanOptionContainer{
+          display: none;
+      }
+
+    #logoutContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #logout {
+        margin: 0;
+    }
+
+    #logoutContainer:hover #logout {
+        margin: 0;
+        width: 170px;
+    }
+
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Investments</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/investments.css">
+    <script src="js/investments.js"></script>
+    <script src="js/file.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerContainer" >
+            <a href="index.html"><div id="logo">
+                <img src="images/logo.png" alt="logo" id="logoImage">
+            </div></a>
+            <div id="bankName">
+                <div class="logoText primaryColor">Stephen</div>
+                <div class="logoText secondaryColor">Comercial</div>
+                <div class="logoText primaryColor">Bank</div>
+                <div class="logoText secondaryColor">of</div>
+                <div class="logoText secondaryColor">Commerce</div>
+            </div>
+        </div>
+        <div class="menuContainer">
+            <div id="menu">
+                <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
+                <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+            </div>
+            <div class="navContainer" >
+    
+                <div class="navOptionContainer" id="homeOptionContainer">
+                    <div id="homeOption" class="navOption" onclick="window.open('index.html');">Home</div>
+                    <div id="homeBlock" class="navBlock">
+                        <a href="index.html#wad-content"><div class="navOptionOption" >What is SCBC?</div></a>
+                        <a href="index.html#tc"><div class="navOptionOption">What do we offer?</div></a>
+                        <a href="index.html#c-a-c"><div class="navOptionOption">Contact us</div></a>
+                        <a href="index.html#c-a-c"><div class="navOptionOption">About our bank</div></a>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="loanOptionContainer">
+                    <div id="loanOption" class="navOption" onclick="window.open('loan.html','_self');">Loan</div>
+                    <div id="loanBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Loan Services</div>
+                        <div class="navOptionOption" onclick="window.open('loan.html#latestOffers','_self');">Latest Offers</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="creditCardsOptionContainer">
+                    <div id="creditCardsOption" class="navOption" onclick="window.open('creditCards.html','_self');">Credit Cards</div>
+                    <div id="creditCardsBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Credit Card Services</div>
+                        <div class="navOptionOption" onclick="window.open('creditCards.html#latestOffers','_self');">Latest Offers</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="insuranceOptionContainer">
+                    <div id="insuranceOption" class="navOption" onclick="window.open('insurance.html','_self');">Insurance</div>
+                    <div id="insuranceBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Insurance Services</div>
+                        <div class="navOptionOption" onclick="window.open('insurance.html#latestOffers','_self');">Latest Offers</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="aboutUsOptionContainer">
+                    <div id="aboutUsOption" class="navOption" onclick="window.open('investments.html','_self');">Investments</div>
+                    <div id="aboutUsBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('investments.html#companyOutlook','_self');">Company Outlook</div>
+                        <div class="navOptionOption" onclick="window.open('investments.html#tableChartHeading','_self');">Yearly Report</div>
+                    </div>
+                </div>
+    
+                <div id="loginSignUpContainer">
+                    <div class="navOption pointer" id="loginSignUp" onclick="window.open('login.html','_self');">Login/Sign up</div>
+                    <div class="loginSignUpBlock">
+                        <div class="loginSignUpOption pointer" onclick="window.open('login.html','_self');">Log In</div>
+                        <div class="loginSignUpOption pointer" onclick="window.open('signup.html','_self');">Sign Up</div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </header>
+<div class="content">
+    <div class="companyOutlook" id="companyOutlook">
+
+
+        <div class="companyOutlookText">
+            <div class="subHeading" id="companyOutlookHeading">
+                Company Outlook
+            </div>
+            After hitting the peaks of profit and investment and then sliding down due to Recession in Global Market. Despite this we were able 
+        to maintain a consistency in our Profit . With Global Demand picking up in the next year we are targetting Profit and Investmets to pick up
+     and add new clients to our SCBC family. We are also targetting the Markets of Asia and Oceana Region. With our Organisation listed on NASDAQ 
+    and Dow Jones shows our acceptance among global competitors. We have also come up with new investment schemes for new Clients and Investors
+By next we are targetting about 30 multi million clients to join us and spread the SCBC family . With the launch of free loan transfer schemes
+from other banks we are targetting to hit our goal of Profit and Customer satisfaction.We have also launched a Interest free program for students
+where levied loan on laons will be be waived until the studies are over. With this we also gave our employees a increase of 15% salary . 
+We consider our employees a part of this company. We are continue to expand and will create about 10000 jobs this fiscal year and become the largest
+employment generator in the North America. We have also tied up with the banks of other countries so that we can remove the charges 
+levied on customers incase people visit other places. </div>
+        <div id="lineChart">
+            <canvas id="c-o-chart" width="1000" height="500"></canvas>
+        </div>
+    </div>
+
+
+    <div class="tableChart">
+        <div id="tableChartHeading" class="subHeading">
+            Yearly Report
+        </div>
+        <div class="tableChartContainer">
+            <div id="table">
+
+            </div>
+
+            <div class="pieChartHeadingContainer">
+                <div class="pieChartContainer">
+
+                    <div class="pieChart" id="investmentChartContainer">
+                        <canvas id="investmentChart" width="300" height="300"></canvas>
+
+                    </div>
+                    <div class="pieChart" id="profitChartContainer">
+                        <canvas id="profitChart" width="300" height="300"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="logos">
+        <div id="logo1" class="companyLogo"></div>
+        <div id="logo2" class="companyLogo"></div>
+        <div id="logo3" class="companyLogo"></div>
+        <div id="logo4" class="companyLogo"></div>
+        <div id="logo5" class="companyLogo"></div>
+    </div>
+</div>
+
+<script>getData()</script>
+
+
+</body>
+</html>

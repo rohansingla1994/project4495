@@ -1,0 +1,228 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.mainHeading{
+    color: #28a2a2;
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 2px solid #28a2a2;
+    margin: 40px 40px;
+}
+.subHeading{
+    color: #28a2a2;
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #28a2a2;
+    margin: 40px 0;
+}
+.companyOutlook{
+    display: flex;
+    flex-direction: row;
+}
+#companyOutlookHeading{
+    margin: 0 0 20px;
+}
+.companyOutlookText{
+    flex-grow: 1;
+    text-align: justify;
+    padding: 20px;
+    margin-right: 20px;
+    line-height: 23px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#lineChart{
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.tableChart{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 40px;
+
+}
+.subHeading{
+    margin: 20px 20px;
+}
+.tableChartContainer{
+    display: flex;
+    flex-direction: row;
+}
+#table{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 40px;
+
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th{
+    color: white;
+    background-color: #333333;
+    width: 150px;
+    height: 30px;
+}
+tr{
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+
+}
+th:nth-child(1){
+    color: white;
+    background-color: #536dfe;
+    border: 1px solid #536dfe;
+    border-right: 1px solid white;
+
+}
+th:nth-child(2){
+    color: white;
+    background-color: #ff4081;
+    border: 1px solid #ff4081;
+    border-right: 1px solid white;
+
+
+}
+th:nth-child(3){
+    color: white;
+    background-color: #ff3d00;
+    border: 1px solid #ff3d00;
+
+}
+table tr:hover td:nth-child(1){
+    background-color: white;
+    color: #536dfe;
+    transition: .7s;
+}
+table tr:hover td:nth-child(2){
+    background-color: white;
+    color:#ff4081;
+    transition: .7s;
+
+}
+table tr:hover td:nth-child(3){
+    background-color: white;
+    color: #ff3d00;
+    transition: .7s;
+
+}
+tr>td:nth-child(1){
+    background-color: rgba(83,109,254,.5);
+    border: 1px solid #536dfe;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+
+}
+tr>td:nth-child(2){
+    background-color: rgba(255,65,129,.5);
+    border: 1px solid #ff4081;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+
+
+}
+tr>td:nth-child(3){
+    background-color: rgba(255,61,0,.5);
+    border: 1px solid #ff3d00;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+
+
+}
+
+.downloadCSV{
+    color:white;
+    background-color: #00c853;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.downloadCSV:hover{
+    color:#00c853;
+    background-color: white;
+    border: 1px solid #00c853;
+    transition: .5s;
+}
+.downloadCSV:active{
+    padding: 10px 25px;
+
+}
+
+.pieChartHeadingContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.pieChartContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+.pieChart{
+    width: 300px;
+    height: 300px;
+}
+.logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 40px;
+}
+.companyLogo{
+    margin: 30px;
+}
+.companyLogo > img{
+    max-width: 200px;
+    max-height: 200px;
+}
+#logo2>img{
+    width: 150px;
+}
+
+@media only screen and (max-width: 1150px) {
+    .companyOutlook{
+        flex-direction: column;
+    }
+    #lineChart{
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+    #c-o-chart{
+        width: 500px;
+    }
+    .tableChartContainer{
+        flex-direction: column;
+    }
+    .logos{
+        flex-direction: column;
+    }
+    .pieChartContainer{
+        flex-direction: column;
+    }
+
+}

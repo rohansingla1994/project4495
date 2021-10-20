@@ -1,0 +1,158 @@
+*{
+    color: white;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+
+}
+.heading1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#mainHeading{
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 2px solid #28a2a2;
+}
+#contentContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Main Content Container Style*/
+#mainContentContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 30px 0 0 15px;
+    padding: 0 20px 0 20px;
+}
+#mainContentContainer .heading1{
+    justify-content: flex-start;
+    border-bottom: 1px solid #CCCCCC;
+}
+.payInstallmentContent{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+.payInstallmentContent > div{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#amount{
+    background-color: #333333;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+
+}
+#amount::-webkit-inner-spin-button{
+    visibility: hidden;
+}
+#amount:focus {
+    outline-width: 0;
+}
+#payNow{
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#payNow:hover{
+    color:#333333;
+    background-color: white;
+    transition: 0.5s;
+}
+#payNow:active{
+    color:#28a2a2;
+    padding: 10px 25px;
+
+
+}
+#tickImage{
+    width: 96px;
+    height: 96px;
+    display: none;
+
+}
+#statusLabel{
+    margin-top: 20px;
+    display: none;
+}
+#crossImage{
+    width: 96px;
+    height: 96px;
+    display: none;
+}
+#mainContentContainer .additionalInfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#mainContentContainer .additionalInfo > div{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    flex-grow: 1;
+    margin-top: 20px;
+}
+#data-installment{
+    font-weight: 300;
+    margin-left: 50px;
+    color: #28a2a2;
+}
+#data-totalDebt{
+    font-weight: 300;
+    margin-left: 50px;
+    color: #28a2a2;
+}
+
+@media only screen and (max-width: 1245px) {
+
+
+}
+@media only screen and (max-width: 1000px) {
+
+}
+@media only screen and (max-width: 835px) {
+    #contentContainer{
+        flex-direction: column;
+        justify-items: center;
+    }
+    #mainContentContainer{
+        width: 385px;
+        min-width: 345px;
+        margin: 20px 0 0 0 ;
+    }
+    .payInstallmentContent{
+        flex-direction: column;
+
+    }
+    #mainContentContainer .additionalInfo{
+        flex-direction: column;
+
+    }
+    .payInstallmentContent{
+        height: 400px;
+    }
+    #mainContentContainer{
+        height: 600px;
+    }
+    #data-totalDebt{
+        margin-left: 77px;
+    }
+
+}

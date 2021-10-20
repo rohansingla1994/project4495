@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/loggedInHeader.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/dashBoard.css">
+    <script src="js/dashBoard.js"></script>
+    <script>checkLogin()</script>
+</head>
+<body>
+
+<header>
+    <div class="headerContainer">
+        <a href="dashBoard.html">
+            <div id="logo">
+                <img src="images/logo.png" alt="logo" id="logoImage">
+            </div>
+        </a>
+        <div id="bankName">
+            <div class="logoText primaryColor">Stephen</div>
+            <div class="logoText secondaryColor">Comercial</div>
+            <div class="logoText primaryColor">Bank</div>
+            <div class="logoText secondaryColor">of</div>
+            <div class="logoText secondaryColor">Commerce</div>
+        </div>
+    </div>
+    <div class="menuContainer">
+        <div id="menu">
+            <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
+            <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+        </div>
+        <div class="navContainer">
+
+            <div class="navOptionContainer" id="homeOptionContainer">
+                <div id="homeOption" class="navOption" onclick="window.open('dashBoard.html','_self');">Home</div>
+            </div>
+
+            <div class="navOptionContainer" id="loanOptionContainer">
+                <div id="loanOption" class="navOption" onclick="window.open('applyLoan.html','_self');">Loan</div>
+                <div id="loanBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('applyLoan.html','_self');">Apply Loan</div>
+                    <div class="navOptionOption" onclick="window.open('payInstallment.html','_self');">Pay Installment</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="applyLoanOptionContainer">
+                <div id="applyLoanOption" class="navOption" onclick="window.open('applyLoan.html','_self');">Apply Loan</div>
+            </div>
+            <div class="navOptionContainer" id="payInstallmentOptionContainer">
+                <div id="payInstallmentOption" class="navOption" onclick="window.open('payInstallment.html','_self');">Pay Installment
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="creditScoreOptionContainer">
+                <div id="creditScoreOption" class="navOption" onclick="window.open('creditScore.html');">Credit Score</div>
+            </div>
+
+            <div id="logoutContainer">
+                <div class="navOption pointer" id="logout" onclick="window.open('index.html','_self'); sessionStorage.clear();">Logout</div>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<section>
+    <div id="mainHeading" class="primaryColor">
+        Profile
+    </div>
+    <div id="contentContainer">
+        <div id="sideInfoBar" class="backgroundAccentColor">
+            <div class="heading1">
+                Basic Information
+            </div>
+            <img id="profileImage" src="https://source.unsplash.com/800x800/?business-man" alt="Profile Picture">
+            <div id="basicDetails">
+                <div class="dataIdentifier">
+                    <div>Name</div>
+                    <div>Age</div>
+                    <div>Gender</div>
+                </div>
+                <div class="dataInformation">
+                    <div class="data-name">Namesdfghjhgfdfghjhghjcc</div>
+                    <div class="data-age">Agefghjkjhgfghjkhgrtgyhj</div>
+                    <div class="data-gender">Genderfghjhgfghjkhgghjkc</div>
+                </div>
+            </div>
+        </div>
+        <div id="mainContentContainer" class="backgroundAccentColor">
+            <div class="heading1">
+                About Me
+            </div>
+            <div id="completeDetails">
+                <div id="column1">
+                    <div class="dataIdentifier">
+                        <div>Name</div>
+                        <div>Age</div>
+                        <div>Date of birth</div>
+                        <div>Gender</div>
+                        <div>Email</div>
+                    </div>
+                    <div class="dataInformation">
+                        <div class="data-name">Namefghjhgfdfghnnhgfdghjhgf</div>
+                        <div class="data-age">Age</div>
+                        <div class="data-DoB">Date of birth</div>
+                        <div class="data-gender">Gender</div>
+                        <div class="data-email">Email</div>
+                    </div>
+                </div>
+                <div id="column2">
+                    <div class="dataIdentifier">
+                        <div>Phone No.</div>
+                        <div>Address Line 1</div>
+                        <div>Address Line 1</div>
+                        <div>Credit Score</div>
+                        <div>Next Installment</div>
+                    </div>
+                    <div class="dataInformation">
+                        <div class="data-phNo">Phone No.</div>
+                        <div class="data-adLine1">Address Line 1</div>
+                        <div class="data-adLine2">Address Line 1</div>
+                        <div onclick="window.open('creditScore.html','_self')" style="display: flex;
+                        flex-direction: row">
+                            <div class="pointer underLine hover">
+                                Check Here
+                            </div>
+                        </div>
+                        <div onclick="window.open('payInstallment.html','_self')" style="display: flex;
+                        flex-direction: row">
+                            <div style="color: #28a2a2" id="payInstallment" class="data-installment">$380.50
+                            </div>
+                            <div class="pointer underLine hover">
+                                Pay Here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="newOffers" >
+                <div class="heading1">COVID-19 Relief Programs</div>
+                <div id="newOfferText">SCBC is offering temporary relief to clients facing financial hardship. You can
+                    ask for more time to make your payments on your mortgages, loans, lines of credit and credit cards.
+                    <br>You can defer your regular payments for up to 6 months if you're experiencing financial hardship.
+                    <br>If your financial situation has been impacted by COVID-19, you can defer your upcoming credit card
+                    payments and benefit from a reduced interest rate of 10.99% on your CIBC credit card.
+                    <br>Payments on loans and lines of credit can be deferred up to 2 months to help manage financial
+                    challenges caused by COVID-19.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>getData()</script>
+</body>
+</html>

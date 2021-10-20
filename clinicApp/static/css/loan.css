@@ -1,0 +1,668 @@
+#input::-webkit-inner-spin-button{
+      visibility: hidden;
+  }
+  #input:focus {
+      outline-width: 0;
+  }
+
+  .textClass{
+    background-color: #333333;
+    
+    border: none;
+    border-bottom:1px solid white;
+  }
+
+
+.headingIcon{
+
+  font-size:18px;
+  border-bottom: 2px solid #28a2a2;
+  margin:40px 40px;
+  color: #28a2a2;
+  font-weight: 400;
+  padding-top: 40px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.mainHeading{
+
+  font-size: 30px;
+  border-bottom: 2px solid #28a2a2;
+  margin:40px 40px;
+  color: #28a2a2;
+  font-weight: 700;
+
+}
+
+.subHeading{
+
+  font-size: 25px;
+  border-bottom: 2px solid #28a2a2;
+  margin:40px 20px;
+  color: #28a2a2;
+  font-weight: 550;
+  padding:20px 0 0 0 ;
+
+}
+.inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding:30px 0;
+
+}
+  
+.in{
+
+  margin-right: 30px;
+}
+
+.comp-al-buttons{
+display: flex;
+flex-direction: row;
+justify-content:center;
+align-items: center;
+}
+
+.caButtons{
+  margin: 20px;
+}
+  
+
+.loanDataDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loanData{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loanDataData{
+  margin-left:30px;
+  color:white;
+}
+
+.loanDataImage{
+  width:50px;
+  height:50px;
+}
+  
+  #loan{
+    margin-left:60px;
+  }
+  
+  
+  .spacing{
+
+    padding-left: 25px;
+  }
+  
+  .emi2{
+    color: #28a2a2;
+    padding-top: 18px;
+    padding-left:20px;
+    font-weight: 700;
+    border-bottom: 2px solid #28a2a2;
+    width:94%;
+    
+  }
+  
+  .complete{
+    background-color:#333333 ;
+    margin-top: 20px;
+    margin-left: 40px;
+    width: calc(100% - 80px);
+  }
+  
+  html{
+    height: 100%;
+    max-width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body{
+    height: 100%;
+    margin: 0;
+  }
+
+
+#alignment{
+  padding-left:55px;
+  padding-top: 45px;
+  color: #28a2a2;
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 2px solid #28a2a2;
+  width:94%;
+  
+  
+
+
+}
+
+.bgcolor{
+  background-color: #FFE933 ;
+}
+
+.cs{
+    color:#28a2a2;
+    font-size: 22px;
+  
+}
+
+.hh{
+    background-color: springgreen;
+    padding-left: 400px;
+}
+
+.align{
+    font-size:20px;
+    padding-left: 90px;
+    padding-top: 80px;
+    float: left;
+}
+
+input{
+    font-size: 15px;
+}
+
+.align2{
+    font-size: 20px;
+    padding-left: 650px;
+    padding-top: 110px;
+    margin-top: 10px;
+    width: 80%;
+    
+}
+
+select{
+    font-size: 20px;
+}
+
+.align3{
+    font-size: 20px;
+    padding-left: 90px;
+    padding-top: 20px;
+}
+
+button{
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.align4{
+    padding-left: 90px;
+    padding-top: 30px;
+    margin-top: 100px;
+
+}
+
+th{
+    color: white;
+    background-color:#333333;
+}
+
+.output1{
+  padding-left:100px;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+
+}
+
+.test{
+  background-image: url("money.png");
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container-table100 {
+    width: 100%;
+    min-height: 100vh;
+    background: #c850c0;
+    background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -o-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
+    background: linear-gradient(45deg, #4158d0, #c850c0);
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+  
+  .wrap-table100 {
+    width: 1170px;
+  }
+  
+  table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+    
+    
+  }
+  table * {
+    position: relative;
+  }
+  table td, table th {
+    padding-left: 8px;
+  }
+
+
+  table thead tr {
+    height: 60px;
+    background: #36304a;
+  }
+  table tbody tr {
+    height: 50px;
+  }
+  table tbody tr:last-child {
+    border: 0;
+  }
+  table td, table th {
+    text-align: left;
+  }
+  table td.l, table th.l {
+    text-align: right;
+  }
+  table td.c, table th.c {
+    text-align: center;
+  }
+  table td.r, table th.r {
+    text-align: center;
+  }
+  
+  
+  .table100-head th{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+  
+  tbody tr:hover {
+    color: #555555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .column1 {
+    width: 50px;
+    padding-left: 40px;
+  }
+  
+  .column2 {
+    width: 50px;
+  }
+  
+  .column3 {
+    width: 50px;
+  }
+  
+  .column4 {
+    width:50px;
+    text-align: right;
+  }
+  
+  .column5 {
+    width: 50px;
+    text-align: right;
+  }
+  
+  .column6 {
+    width: 50px;
+    text-align: right;
+    padding-right: 62px;
+  }
+  
+  
+  @media screen and (max-width: 992px) {
+    table {
+      display: block;
+    }
+    table > *, table tr, table td, table th {
+      display: block;
+    }
+    table thead {
+      display: none;
+    }
+    table tbody tr {
+      height: auto;
+      padding: 37px 0;
+    }
+    table tbody tr td {
+      padding-left: 40% !important;
+      margin-bottom: 24px;
+    }
+    table tbody tr td:last-child {
+      margin-bottom: 0;
+    }
+    table tbody tr td:before {
+      font-family: OpenSans-Regular;
+      font-size: 14px;
+      color: #999999;
+      line-height: 1.2;
+      font-weight: unset;
+      position: absolute;
+      width: 40%;
+      left: 30px;
+      top: 0;
+    }
+    table tbody tr td:nth-child(1):before {
+      content: "Date";
+    }
+    table tbody tr td:nth-child(2):before {
+      content: "Order ID";
+    }
+    table tbody tr td:nth-child(3):before {
+      content: "Name";
+    }
+    table tbody tr td:nth-child(4):before {
+      content: "Price";
+    }
+    table tbody tr td:nth-child(5):before {
+      content: "Quantity";
+    }
+    table tbody tr td:nth-child(6):before {
+      content: "Total";
+    }
+  
+    .column4,
+    .column5,
+    .column6 {
+      text-align: left;
+    }
+  
+    .column4,
+    .column5,
+    .column6,
+    .column1,
+    .column2,
+    .column3 {
+      width: 100%;
+    }
+  
+    tbody tr {
+      font-size: 14px;
+    }
+  }
+
+  #gender{
+    width: 300px;
+}
+#input-DoB{
+    margin: 0 0 0 120px;
+    padding: 0 0 0 10px;
+}
+
+#genderButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #28a2a2;
+    color: white;
+    height: 41px;
+    width: 131px;
+    cursor: pointer;
+    transition: 0.6s;
+
+
+}
+#genderButton:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #28a2a2;
+    height: 41px;
+    width: 131px;
+    cursor: pointer;
+}
+
+#genderBlock{
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+}
+
+#gender:hover #genderBlock{
+    display: block;
+}
+
+
+.genderOption{
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background-color: white;
+    color: #28a2a2;
+    margin-top: 1px;
+    border-bottom:  1px solid #44aacc;
+    height: 30px;
+    width: 131px;
+}
+.genderOption:hover{
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background-color: #28a2a2;
+    color: white;
+    margin-top: 1px;
+    height: 30px;
+    width: 131px;
+    transition: 0.6s;
+}
+.genderOption:active{
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background-color: white;
+    color: #28a2a2;
+    margin-top: 1px;
+    height: 30px;
+    width: 140px;
+    transition: 0.2s;
+
+}
+
+.button{
+  display: inline;
+  padding:10px 20px;
+  border: 1px solid white;
+  color: white;
+  background-color: #333333;
+  transition: 0.5s;
+  
+}
+.button:hover{
+  color: #333333;
+  
+  background-color:white;
+}
+.button:active{
+  padding:10px 25px;
+
+  color:#28a2a2;
+
+}
+
+
+input::-webkit-inner-spin-button{
+  visibility: hidden;
+}
+input:focus {
+  outline-width: 0;
+}
+  
+  @media (max-width: 950px) {
+    .container-table100 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    #nav{ 
+      padding: 5px;
+      position: absolute;
+      left: 0px;
+      width: 150px;    
+      }
+
+      .inputs{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        font-weight:100;
+        margin:5px;
+        
+      }
+
+      .textClass{
+        font-size: 15px;
+        font-weight:100;
+        margin:10px;
+
+      }
+
+      
+
+      .cs{
+
+        font-size: 15px;
+        font-weight:100;
+        padding:0;
+        margin:10px;
+
+
+      }
+
+      .mainHeading{
+        font-size: 26px;
+      }
+
+      .mainHeading{
+        font-size: 28px;
+      }
+
+      .loanDataDetails{
+        flex-direction: column;
+      }
+
+      .output1{
+        display: none;
+      }
+
+      .subHeading{
+        font-size: 25px;
+        font-weight: 100;
+      }
+
+      .in{
+        margin:10px;
+
+
+      }
+
+      .gender{
+        margin-left: 3px;
+      }
+
+      #genderButton{
+        margin-left: 0;
+       
+      }
+ }
+
+ @media (max-width: 1200px){
+
+  .loanDataDetails{
+    flex-direction: column;
+  }
+
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight:100;
+    margin:5px;
+    
+    } 
+  
+    .cs{
+
+      font-size: 15px;
+      font-weight:100;
+      padding:0;
+      margin:10px;
+   }
+
+   #genderButton{
+    margin-left: 0;
+   
+  }
+  .textClass{
+    font-size: 15px;
+    font-weight:100;
+    margin:10px;
+
+
+  }
+
+  .in{
+    margin:10px;
+
+
+  }
+
+
+}

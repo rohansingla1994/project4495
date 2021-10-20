@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pay Installment</title>
+    <link rel="stylesheet" href="css/loggedInHeader.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/payInstallment.css">
+    <script src="js/payInstallment.js"></script>
+    <script>checkLogin()</script>
+
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <a href="dashBoard.html">
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo" id="logoImage">
+                </div>
+            </a>
+            <div id="bankName">
+                <div class="logoText primaryColor">Stephen</div>
+                <div class="logoText secondaryColor">Comercial</div>
+                <div class="logoText primaryColor">Bank</div>
+                <div class="logoText secondaryColor">of</div>
+                <div class="logoText secondaryColor">Commerce</div>
+            </div>
+        </div>
+        <div class="menuContainer">
+            <div id="menu">
+                <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
+                <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+            </div>
+            <div class="navContainer">
+    
+                <div class="navOptionContainer" id="homeOptionContainer">
+                    <div id="homeOption" class="navOption" onclick="window.open('dashBoard.html','_self');">Home</div>
+                </div>
+    
+                <div class="navOptionContainer" id="loanOptionContainer">
+                    <div id="loanOption" class="navOption" onclick="window.open('applyLoan.html','_self');">Loan</div>
+                    <div id="loanBlock" class="navBlock">
+                        <div class="navOptionOption" onclick="window.open('applyLoan.html','_self');">Apply Loan</div>
+                        <div class="navOptionOption" onclick="window.open('payInstallment.html','_self');">Pay Installment</div>
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="applyLoanOptionContainer">
+                    <div id="applyLoanOption" class="navOption" onclick="window.open('applyLoan.html','_self');">Apply Loan</div>
+                </div>
+                <div class="navOptionContainer" id="payInstallmentOptionContainer">
+                    <div id="payInstallmentOption" class="navOption" onclick="window.open('payInstallment.html','_self');">Pay Installment
+                    </div>
+                </div>
+    
+                <div class="navOptionContainer" id="creditScoreOptionContainer">
+                    <div id="creditScoreOption" class="navOption" onclick="window.open('creditScore.html');">Credit Score</div>
+                </div>
+    
+                <div id="logoutContainer">
+                    <div class="navOption pointer" id="logout" onclick="window.open('index.html','_self'); sessionStorage.clear();">Logout</div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </header>
+
+<section>
+    <div id="mainHeading" class="primaryColor">
+        Pay Installment
+    </div>
+    <div id="contentContainer">
+        <div id="mainContentContainer" class="backgroundAccentColor">
+            <div class="heading1">
+                Installment
+            </div>
+            <div class="payInstallmentContent">
+                <div>
+                    <div>
+                        <label for="amount">$</label>
+                        <input type="number" id="amount">
+                    </div>
+
+                    <div id="payNow" onclick="payNow()">Pay Now</div>
+
+                </div>
+                <div>
+                    <img src="images/tick.png" alt="tick" id="tickImage">
+                    <img src="images/cross.png" alt="cross" id="crossImage">
+                    <div id="statusLabel">Amount Payed</div>
+                </div>
+            </div>
+            <div>
+                <div class="heading1">
+                    Additional Information
+                </div>
+                <div class="additionalInfo">
+                    <div>
+                        <div>Monthly Payment</div>
+                        <div id="data-installment">$620</div>
+                    </div>
+                    <div>
+                        <div>Amount owed</div>
+                        <div id="data-totalDebt">$9999</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>getData()</script>
+ 
+</body>
+</html>
