@@ -6,3 +6,7 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request, 'index.html')
+
+
+def hometest(request):
+    return render(request, 'index.html#wad-content')

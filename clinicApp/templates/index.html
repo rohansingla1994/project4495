@@ -13,7 +13,7 @@
 
 <header>
     <div class="headerContainer" >
-        <a href="index.html"><div id="logo">
+        <a onclick="location.href='{% url 'home' %}'"><div id="logo">
             <img src="{% static 'images/logo.png'%}" alt="logo" id="logoImage">
         </div></a>
         <div id="bankName">
@@ -22,18 +22,19 @@
     </div>
     <div class="menuContainer">
         <div id="menu">
-            <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
-            <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
+            <img src="{% static 'images/menu_secondary.png'%}" alt="menu" id="menuInActive" class="menuButton">
+            <img src="{% static 'images/menu_accent.png'%}" alt="menu" id="menuActive" class="menuButton">
         </div>
+        {% load custom_tags %}
         <div class="navContainer" >
 
             <div class="navOptionContainer" id="homeOptionContainer">
-                <div id="homeOption" class="navOption" onclick="window.open('index.html');">Home</div>
+                <div id="homeOption" class="navOption" onclick="location.href='{% url 'home' %}'">Home</div>
                 <div id="homeBlock" class="navBlock">
-                    <a href="index.html#wad-content"><div class="navOptionOption" >What is SCBC?</div></a>
-                    <a href="index.html#tc"><div class="navOptionOption">What do we offer?</div></a>
-                    <a href="index.html#c-a-c"><div class="navOptionOption">Contact us</div></a>
-                    <a href="index.html#c-a-c"><div class="navOptionOption">About our bank</div></a>
+                    <a href="{% anchor 'home' 'wad-content' %}"><div class="navOptionOption" >What is SCBC?</div></a>
+                    <a href="{% anchor 'home' 'tc' %}"><div class="navOptionOption">What do we offer?</div></a>
+                    <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">Contact us</div></a>
+                    <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">About our bank</div></a>
                 </div>
             </div>
 
@@ -86,7 +87,7 @@
 
 
         <div class="mySlides fade">
-            <img src="https://source.unsplash.com/1600x900/?downtown" style="width:100%; height:430px;object-fit: cover;">\
+            <img src="https://source.unsplash.com/1600x900/?doctor" style="width:100%; height:430px;object-fit: cover;">\
             <div class="dots">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -95,7 +96,7 @@
         </div>
 
         <div class="mySlides fade">
-            <img src="https://source.unsplash.com/1600x900/?skyline" style="width:100%;height:430px;object-fit: cover;">
+            <img src="https://source.unsplash.com/1600x900/?ambulance" style="width:100%;height:430px;object-fit: cover;">
             <div class="dots">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -104,7 +105,7 @@
         </div>
 
         <div class="mySlides fade">
-            <img src="https://source.unsplash.com/1600x900/?highrise" style="width:100%;height:430px;object-fit: cover;">
+            <img src="https://source.unsplash.com/1600x900/?hospital" style="width:100%;height:430px;object-fit: cover;">
             <div class="dots">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -177,7 +178,7 @@
             <div onclick="window.open('insurance.html');" class="tech-card">
                 <img src="{% static 'images/i3.jpg'%}" alt="i3">
                 <h3>Insurance</h3>
-                <p>We care for the disasters. Come and Plan to avoid last time surprises. Give a call and we will take care of 
+                <p>We care for the disasters. Come and Plan to avoid last time surprises. Give a call and we will take care of
                     virtually everything for you.
                 </p>
             </div>
