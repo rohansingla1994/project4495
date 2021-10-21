@@ -8,5 +8,17 @@ def home(request):
     return render(request, 'index.html')
 
 
-def hometest(request):
-    return render(request, 'index.html#wad-content')
+def heart(request):
+    return render(request, 'heartHealth.html')
+
+
+def brain(request):
+    return render(request, 'brainHealth.html')
+
+
+def lifestyle(request):
+    return render(request, 'lifeStyle.html')
+
+
+def statistics(request):
+    return render(request, 'statistics.html')

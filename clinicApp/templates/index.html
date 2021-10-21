@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ClinicO</title>
+    <title>Strive Health</title>
     {% load static %}
     <link href="{% static 'css/index.css'%}" rel="stylesheet">
     <link href="{% static 'css/carousel.css'%}" rel="stylesheet">
@@ -17,7 +17,8 @@
             <img src="{% static 'images/logo.png'%}" alt="logo" id="logoImage">
         </div></a>
         <div id="bankName">
-            <div class="logoText primaryColor">ClinicO</div>
+            <div class="logoText primaryColor">Strive </div>
+             <div class="logoText secondaryColor">Health</div>
         </div>
     </div>
     <div class="menuContainer">
@@ -31,39 +32,39 @@
             <div class="navOptionContainer" id="homeOptionContainer">
                 <div id="homeOption" class="navOption" onclick="location.href='{% url 'home' %}'">Home</div>
                 <div id="homeBlock" class="navBlock">
-                    <a href="{% anchor 'home' 'wad-content' %}"><div class="navOptionOption" >What is SCBC?</div></a>
+                    <a href="{% anchor 'home' 'wad-content' %}"><div class="navOptionOption" >What is SH?</div></a>
                     <a href="{% anchor 'home' 'tc' %}"><div class="navOptionOption">What do we offer?</div></a>
                     <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">Contact us</div></a>
-                    <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">About our bank</div></a>
+                    <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">About Us</div></a>
                 </div>
             </div>
 
             <div class="navOptionContainer" id="loanOptionContainer">
-                <div id="loanOption" class="navOption" onclick="window.open('loan.html','_self');">Loan</div>
+                <div id="loanOption" class="navOption" onclick="location.href='{% url 'heart' %}'">Heart</div>
                 <div id="loanBlock" class="navBlock">
-                    <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Loan Services</div>
+                    <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Heart Services</div>
                     <div class="navOptionOption" onclick="window.open('loan.html#latestOffers','_self');">Latest Offers</div>
                 </div>
             </div>
 
             <div class="navOptionContainer" id="creditCardsOptionContainer">
-                <div id="creditCardsOption" class="navOption" onclick="window.open('creditCards.html','_self');">Credit Cards</div>
+                <div id="creditCardsOption" class="navOption" onclick="location.href='{% url 'brain' %}'">Stroke</div>
                 <div id="creditCardsBlock" class="navBlock">
-                    <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Credit Card Services</div>
+                    <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Brain Stroke</div>
                     <div class="navOptionOption" onclick="window.open('creditCards.html#latestOffers','_self');">Latest Offers</div>
                 </div>
             </div>
 
             <div class="navOptionContainer" id="insuranceOptionContainer">
-                <div id="insuranceOption" class="navOption" onclick="window.open('insurance.html','_self');">Insurance</div>
+                <div id="insuranceOption" class="navOption" onclick="location.href='{% url 'lifestyle' %}'">Lifestyle</div>
                 <div id="insuranceBlock" class="navBlock">
-                    <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Insurance Services</div>
+                    <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Lifestyle Development</div>
                     <div class="navOptionOption" onclick="window.open('insurance.html#latestOffers','_self');">Latest Offers</div>
                 </div>
             </div>
 
             <div class="navOptionContainer" id="aboutUsOptionContainer">
-                <div id="aboutUsOption" class="navOption" onclick="window.open('investments.html','_self');">Investments</div>
+                <div id="aboutUsOption" class="navOption" onclick="location.href='{% url 'statistics' %}'">Statistics</div>
                 <div id="aboutUsBlock" class="navBlock">
                     <div class="navOptionOption" onclick="window.open('investments.html#companyOutlook','_self');">Company Outlook</div>
                     <div class="navOptionOption" onclick="window.open('investments.html#tableChartHeading','_self');">Yearly Report</div>
@@ -147,9 +148,10 @@
 
 <section class="w-a-d default-grid">
     <div class="wad-content" id="wad-content">
-        <div class="h2">ClinicO</div>
-        <div class="columns">A Bank for the people. We provide all services like Loan , Insurance , Credit cards at affordable Rates
-            We aim at bridging the gap between technology and the Customer and build non breakable relationships. Come and become part of the revolution   </div>
+        <div class="h2">Strive Health</div>
+        <div class="columns">
+            Strive Health is a personal health assistant based in British Columbia and one of the busiest in the Fraser Health Authority. It is located in New Westminster overlooking the Fraser River and is the only hospital in
+            the Lower Mainland that is immediately adjacent to a Skytrain station.
     </div>
 
 </section>
@@ -159,27 +161,27 @@
 
             <div onclick="window.open('loan.html');" class="tech-card">
                 <img src="{% static 'images/i1.jpg'%}" alt="i1">
-                <h3>Loans</h3>
-                <p>Loans are provided at attractive rate of interest and just a click of button. Please click further for details of EMI's. Get a free
-                    transfer of loans.
+                <h3>Heart Health</h3>
+                <p>Cardiovascular diseases have high rates of morbidity, mortality, and disability,
+                    and are the leading causes of human death irrespective of age, race, and region.
                 </p>
             </div>
 
 
             <div onclick="window.open('creditCards.html');" class="tech-card">
                 <img src="{% static 'images/i2.jpg'%}" alt="i2">
-                <h3>Credit cards</h3>
-                <p>Apply for a credit card just a click away and explore the range of features and services,
-                    Our cards work everywhere around the world and offer the best Cross Currency conversion rates in the market.
+                <h3>Brain Health</h3>
+                <p>Aging and a family history can increase your risk for a stroke,
+                    but women can reduce this risk by managing factors that are under their control.
                 </p>
             </div>
 
 
             <div onclick="window.open('insurance.html');" class="tech-card">
                 <img src="{% static 'images/i3.jpg'%}" alt="i3">
-                <h3>Insurance</h3>
-                <p>We care for the disasters. Come and Plan to avoid last time surprises. Give a call and we will take care of
-                    virtually everything for you.
+                <h3>Lifestyle</h3>
+                <p>Being healthy should be part of your overall lifestyle. Living a healthy
+                    lifestyle can help prevent cardiovascular diseases and neurological diseases.
                 </p>
             </div>
 
@@ -189,9 +191,11 @@
 
 <section class="w-h-n default-grid">
     <div class="whn-content">
-        <h2>We handle all of your Banking needs</h2>
-        <p>Come and Join the revolution of interprenaurs. You join us and we promise we will take care of you.<br>
-        We have every service that you need in the Financial Management. </p>
+        <h2>We use Advance Machine Learning</h2>
+        <p>We use specific techniques and methods to analyze big amounts of data,
+             and advanced machine learning techniques we use to make state-of-the art AI models.
+           We apply Bayesian methods in many areas: from disease diagnosis to drug discovery.
+        </p>
     </div>
 
 </section>
@@ -201,13 +205,13 @@
         <h2>Contact Us</h2>
         <p>Lorem ipsum. - CEO and Founder<br><br>
         </p>
-        <p>contact@stephencommercialbank.ca</p>
+        <p>contact@strivehealth.ca</p>
     </div>
     <div class="a-o-c">
         <h2>About Our Company</h2>
-        <p>Launched in the year 2008 with a aim to revolutionise the Banking industry we slowly became market leader in this field. 
-            Launched by two IT Enterprenaurs to provide affordable banking, it soon took over Market giants and became a market leader
-            in North America and later penetrated into Latin America as well
+        <p>Launched in the year 2020 with a aim to revolutionise the Disease Diagnosis we slowly became market leader in this field.
+            Launched by four IT Enterprenaurs to provide affordable diagnosis, it soon took over Market giants and became a market leader
+            in North America and later penetrated into Latin America as well.
         </p>
     </div>
 </section>
@@ -216,7 +220,7 @@
 <footer style="display: flex;justify-content: center;align-items: center;">
     
     <div >
-        <a href="#">SCBC &copy; </a>
+        <a href="#">SH&copy; </a>
         <p>All rights reserved</p>
         
     </div>
