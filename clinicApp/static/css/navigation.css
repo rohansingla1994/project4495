@@ -1,0 +1,49 @@
+#nav_signin{
+    background-color: #FFFFFF;
+    color: black;
+    }
+#nav-block{
+    display: none;
+    width: 100%;
+    height: 320px;
+    flex-direction: column;
+    align-items: end;
+    background-color: #212529;
+}
+.nav-block-item{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border-bottom: 1px solid #FFFFFF8C;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+}
+.nav-block-item>a{
+    text-decoration: none;
+    color: #FFFFFF8C;
+}
+
+
+#nav-icon-menu{
+    display: none;
+}
+ 
+@media only screen and (max-width: 790px) {
+    .navbar-nav{
+        display: none;
+    }
+    #nav-icon-menu{
+        display: block;
+    }
+    #nav-block{
+        display: block; 
+    }
+    
+    
+        
+    
+  }
+
+
+
