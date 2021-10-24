@@ -3,94 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign-Up</title>
-    <link rel="stylesheet" href="css/LS.css">
-    <link rel="stylesheet" href="library/font-awesome-4.7.0/css/font-awesome.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/LS.css'%}">
+    <link rel="stylesheet" href="{% static 'library/font-awesome-4.7.0/css/font-awesome.css'%}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/signup.js"></script>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/utility.css">
+    <script src="{% static 'js/signup.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'css/utility.css'%}">
 
 </head>
 <body>
-    <header>
-        <div class="headerContainer" >
-            <a href="index.html"><div id="logo">
-                <img src="images/logo.png" alt="logo" id="logoImage">
-            </div></a>
-            <div id="bankName">
-                <div class="logoText primaryColor">Stephen</div>
-                <div class="logoText secondaryColor">Comercial</div>
-                <div class="logoText primaryColor">Bank</div>
-                <div class="logoText secondaryColor">of</div>
-                <div class="logoText secondaryColor">Commerce</div>
-            </div>
+<header>
+    <div class="headerContainer" >
+        <a onclick="location.href='{% url 'home' %}'"><div id="logo">
+            <img src="{% static 'images/logo.png'%}" alt="logo" id="logoImage">
+        </div></a>
+        <div id="bankName">
+            <div class="logoText primaryColor">Strive </div>
+             <div class="logoText secondaryColor">Health</div>
         </div>
-        <div class="menuContainer">
-            <div id="menu">
-                <img src="images/menu_secondary.png" alt="menu" id="menuInActive" class="menuButton">
-                <img src="images/menu_accent.png" alt="menu" id="menuActive" class="menuButton">
-            </div>
-            <div class="navContainer" >
-    
-                <div class="navOptionContainer" id="homeOptionContainer">
-                    <div id="homeOption" class="navOption" onclick="window.open('index.html');">Home</div>
-                    <div id="homeBlock" class="navBlock">
-                        <a href="index.html#wad-content"><div class="navOptionOption" >What is SCBC?</div></a>
-                        <a href="index.html#tc"><div class="navOptionOption">What do we offer?</div></a>
-                        <a href="index.html#c-a-c"><div class="navOptionOption">Contact us</div></a>
-                        <a href="index.html#c-a-c"><div class="navOptionOption">About our bank</div></a>
-                    </div>
-                </div>
-    
-                <div class="navOptionContainer" id="loanOptionContainer">
-                    <div id="loanOption" class="navOption" onclick="window.open('loan.html','_self');">Loan</div>
-                    <div id="loanBlock" class="navBlock">
-                        <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Loan Services</div>
-                        <div class="navOptionOption" onclick="window.open('loan.html#latestOffers','_self');">Latest Offers</div>
-                    </div>
-                </div>
-    
-                <div class="navOptionContainer" id="creditCardsOptionContainer">
-                    <div id="creditCardsOption" class="navOption" onclick="window.open('creditCards.html','_self');">Credit Cards</div>
-                    <div id="creditCardsBlock" class="navBlock">
-                        <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Credit Card Services</div>
-                        <div class="navOptionOption" onclick="window.open('creditCards.html#latestOffers','_self');">Latest Offers</div>
-                    </div>
-                </div>
-    
-                <div class="navOptionContainer" id="insuranceOptionContainer">
-                    <div id="insuranceOption" class="navOption" onclick="window.open('insurance.html','_self');">Insurance</div>
-                    <div id="insuranceBlock" class="navBlock">
-                        <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Insurance Services</div>
-                        <div class="navOptionOption" onclick="window.open('insurance.html#latestOffers','_self');">Latest Offers</div>
-                    </div>
-                </div>
-    
-                <div class="navOptionContainer" id="aboutUsOptionContainer">
-                    <div id="aboutUsOption" class="navOption" onclick="window.open('investments.html','_self');">Investments</div>
-                    <div id="aboutUsBlock" class="navBlock">
-                        <div class="navOptionOption" onclick="window.open('investments.html#companyOutlook','_self');">Company Outlook</div>
-                        <div class="navOptionOption" onclick="window.open('investments.html#tableChartHeading','_self');">Yearly Report</div>
-                    </div>
-                </div>
-    
-                <div id="loginSignUpContainer">
-                    <div class="navOption pointer" id="loginSignUp" onclick="window.open('login.html','_self');">Login/Sign up</div>
-                    <div class="loginSignUpBlock">
-                        <div class="loginSignUpOption pointer" onclick="window.open('login.html','_self');">Log In</div>
-                        <div class="loginSignUpOption pointer" onclick="window.open('signup.html','_self');">Sign Up</div>
-                    </div>
-                </div>
-    
-            </div>
+    </div>
+    <div class="menuContainer">
+        <div id="menu">
+            <img src="{% static 'images/menu_secondary.png'%}" alt="menu" id="menuInActive" class="menuButton">
+            <img src="{% static 'images/menu_accent.png'%}" alt="menu" id="menuActive" class="menuButton">
         </div>
-    </header>
+        {% load custom_tags %}
+        <div class="navContainer" >
+
+            <div class="navOptionContainer" id="homeOptionContainer">
+                <div id="homeOption" class="navOption" onclick="location.href='{% url 'home' %}'">Home</div>
+                <div id="homeBlock" class="navBlock">
+                    <a href="{% anchor 'home' 'wad-content' %}"><div class="navOptionOption" >What is SH?</div></a>
+                    <a href="{% anchor 'home' 'tc' %}"><div class="navOptionOption">What do we offer?</div></a>
+                    <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">Contact us</div></a>
+                    <a href="{% anchor 'home' 'c-a-c' %}"><div class="navOptionOption">About Us</div></a>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="loanOptionContainer">
+                <div id="loanOption" class="navOption" onclick="location.href='{% url 'heart' %}'">Heart</div>
+                <div id="loanBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('loan.html#loanCredit','_self');">Heart Services</div>
+                    <div class="navOptionOption" onclick="window.open('loan.html#latestOffers','_self');">Latest Offers</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="creditCardsOptionContainer">
+                <div id="creditCardsOption" class="navOption" onclick="location.href='{% url 'brain' %}'">Stroke</div>
+                <div id="creditCardsBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('creditCards.html#cardCredit','_self');">Brain Stroke</div>
+                    <div class="navOptionOption" onclick="window.open('creditCards.html#latestOffers','_self');">Latest Offers</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="insuranceOptionContainer">
+                <div id="insuranceOption" class="navOption" onclick="location.href='{% url 'lifestyle' %}'">Lifestyle</div>
+                <div id="insuranceBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('insurance.html#insurancePremium','_self');">Lifestyle Development</div>
+                    <div class="navOptionOption" onclick="window.open('insurance.html#latestOffers','_self');">Latest Offers</div>
+                </div>
+            </div>
+
+            <div class="navOptionContainer" id="aboutUsOptionContainer">
+                <div id="aboutUsOption" class="navOption" onclick="location.href='{% url 'statistics' %}'">Statistics</div>
+                <div id="aboutUsBlock" class="navBlock">
+                    <div class="navOptionOption" onclick="window.open('investments.html#companyOutlook','_self');">Company Outlook</div>
+                    <div class="navOptionOption" onclick="window.open('investments.html#tableChartHeading','_self');">Yearly Report</div>
+                </div>
+            </div>
+
+            <div id="loginSignUpContainer">
+                <div class="navOption pointer" id="loginSignUp" onclick="location.href='{% url 'signin' %}'">Login/Sign up</div>
+                <div class="loginSignUpBlock">
+                    <div class="loginSignUpOption pointer" onclick="location.href='{% url 'signin' %}'">Log In</div>
+                    <div class="loginSignUpOption pointer" onclick="location.href='{% url 'signup' %}'">Sign Up</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
 <div class="container"  style="padding: 50px 0 50px 0;">
     <div class="contentContainer">
 
         <div class="textImage">
-            <div class="userImageIcon">
-            </div>
+
             <div class="primaryColor" style="font-size: 25px;margin-top: 20px;text-decoration: underline;">Sign Up</div>
         </div>
 
@@ -145,7 +143,7 @@
 
         <div class="loginLine">
             <p style="display: inline;color: #888888">Already a member? </p>
-            <a class="loginButton" href="login.html" id="loginButton">Log-In</a>
+            <a class="loginButton" href="signin.html" id="loginButton">Log-In</a>
         </div>
 
     </div>

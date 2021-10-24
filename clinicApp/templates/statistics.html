@@ -74,10 +74,10 @@
             </div>
 
             <div id="loginSignUpContainer">
-                <div class="navOption pointer" id="loginSignUp" onclick="window.open('login.html','_self');">Login/Sign up</div>
+                <div class="navOption pointer" id="loginSignUp" onclick="location.href='{% url 'signin' %}'">Login/Sign up</div>
                 <div class="loginSignUpBlock">
-                    <div class="loginSignUpOption pointer" onclick="window.open('login.html','_self');">Log In</div>
-                    <div class="loginSignUpOption pointer" onclick="window.open('signup.html','_self');">Sign Up</div>
+                    <div class="loginSignUpOption pointer" onclick="location.href='{% url 'signin' %}'">Log In</div>
+                    <div class="loginSignUpOption pointer" onclick="location.href='{% url 'signup' %}'">Sign Up</div>
                 </div>
             </div>
 

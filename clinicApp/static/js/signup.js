@@ -53,7 +53,7 @@ function FetchHtml() {
 function SendHtml() {
     console.log("SendHtml");
     alert("Thanks for Registering");
-    window.open("login.html","_self");
+    window.open("signin.html","_self");
 
 }
 

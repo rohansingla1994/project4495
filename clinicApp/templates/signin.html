@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Credit Cards</title>
-     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/offers.css' %}">
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/utility.css' %}">
-
-    
+    <title>Log-In</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'library/font-awesome-4.7.0/css/font-awesome.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/login.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/LS.css'%}">
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'css/utility.css'%}">
 </head>
 <body>
-    
+
 <header>
     <div class="headerContainer" >
         <a onclick="location.href='{% url 'home' %}'"><div id="logo">
@@ -83,52 +84,47 @@
         </div>
     </div>
 </header>
-   
-<div class="blur" >
-    <a id="readMore" href="#cardCredit">
-        Read More
-    </a>
-</div>
-<div class="links" id="cardCredit">
-    <div class="links-grid container">
-        <div class="links-item center">
-            <i class="fab fa-youtube fa-3x"></i>
-            <img src="{% static 'images/stroke.png'%}" class="credit1">
-            <h3>What is Stroke</h3>
-            <p>A stroke occurs when the blood supply to part of your brain is interrupted or reduced,
-                preventing brain tissue from getting oxygen and nutrients.</p>
-        </div>
-        <div class="links-item center">
-            <i class="fas fa-chalkboard-teacher fa-3x"></i>
-            <img src="{% static 'images/medicine.png'%}" class="credit2">
-            <h3>Emergency IV medication</h3>
-            <p>An IV injection of recombinant tissue plasminogen activator (tPA) — also called alteplase (Activase)
-                — is the gold standard treatment for ischemic stroke </p>
-        </div>
-        <div class="links-item center">
-            <i class="fas fa-briefcase fa-3x"></i>
-            <img src="{% static 'images/treatment.png'%}" class="credit3">
-            <h3>SCBC Premium Aventura</h3>
-            <p> A Card for the Businessman. This product is designed for high Business needs . We provide this card at @2.4% interest</p>
-        </div>
-    </div>
-</div>
-<div class="about bg-light" id="latestOffers">
-    <div class="about-grid container">
-        <div class="about-item right">
-            <img src="{% static 'images/icon.png'%}" style="width: 100px;height: 100px;">
+
+<div class="container">
+    <div class="contentContainer" style="height: 500px;width: 400px">
+
+        <div class="textImage">
+
+            <div class="primaryColor" style="font-size: 25px;margin-top: 20px;text-decoration: underline;">Log In</div>
         </div>
 
-         <div class="about-item">
-            <h3 class="bg-light">Insurance Services</h3>
-            <p class="bg-light">In order to make your visit to Strive Health more convenient
-                we are excited to offer direct billing to most insurance providers.</p>
+        <form class="dataInput" onsubmit="return false">
+            <div class="validationLabel" id="validationLabel"></div>
+
+            <p class="input-container">
+                <input type="email" id="input-email" class="login-input" required>
+                <label for="input-email" unselectable="on" id="label-email">Email*</label>
+            </p>
+
+
+            <p class="input-container">
+                <input type="password" id="input-password" class="login-input" required>
+                <label for="input-password" unselectable="on" id="label-password">Password*</label>
+            </p>
+
+            <div style="display: flex;flex-direction: row;justify-content: center;">
+                <input type="submit" name="Sign Up" id="signUpButton" style="margin-top: 100px" onclick="Login()">
+                <button id="signUpButton" style="margin-top: 100px">Google SignIn</button>
+            </div>
+
+
+        </form>
+
+        <div class="loginLine" style="margin-top: 50px">
+            <p style="display: inline;color: #888888">Become a member. </p>
+            <a class="loginButton" href="signup.html" id="loginButton">Sign-Up</a>
         </div>
+
+
     </div>
 </div>
-<div class="footer bg-dark center">
-    <p>All rights reserved  &copy; 2020</p>
-</div>
+
+<script src="js/LS.js"></script>
 
 </body>
 </html>

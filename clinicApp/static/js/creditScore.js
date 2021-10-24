@@ -107,6 +107,6 @@ function checkLogin() {
     var status=sessionStorage.getItem("currentUser");
     if(status===null){
         alert("You need to login first!!");
-        window.open('login.html','_self');
+        window.open('signin.html','_self');
     }
 }

@@ -29,7 +29,7 @@ body{
     height: 700px;
     background: white;
     border-radius: 10px;
-    border: 2px solid #28a2a2;
+    border: 2px solid #C01F31;
 }
 
 /*Top Heading Image/Icon*/
@@ -97,7 +97,7 @@ input {
 }
 input:focus {
     outline: none;
-    border-bottom: 1px solid #28a2a2;
+    border-bottom: 1px solid #C01F31;
 }
 
 /*Input Animation Styles*/
@@ -109,27 +109,27 @@ input:focus {
   }
 
 .animation-color label {
-    color: #28a2a2;
+    color: #C01F31;
 }
 
 
 #signUpButton{
-    background-color: #28a2a2;
+    background-color: #C01F31;
     color: white;
     width: 100px;
     margin: 20px 0 0 0;
     align-self: center;
 }
 #signUpButton:hover{
-    border: 1px solid #28a2a2;
+    border: 1px solid #C01F31;
     background-color: white;
     width: 130px;
-    color: #28a2a2;
+    color: #C01F31;
     align-self: center;
     margin: 20px 0 0 0;
 }
 #signUpButton:active{
-    background-color: #28a2a2;
+    background-color: #C01F31;
     color: white;
     width: 150px;
     align-self: center;
@@ -141,8 +141,8 @@ input:focus {
 }
 
 #loginButton{
-    color: #28a2a2;
-    text-decoration: #28a2a2;
+    color: #C01F31;
+    text-decoration: #C01F31;
 }
 
 #gender{
@@ -157,7 +157,7 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #28a2a2;
+    background-color: #C01F31;
     color: white;
     height: 41px;
     width: 131px;
@@ -171,7 +171,7 @@ input:focus {
     align-items: center;
     justify-content: center;
     background-color: white;
-    color: #28a2a2;
+    color: #C01F31;
     height: 41px;
     width: 131px;
     cursor: pointer;
@@ -194,9 +194,9 @@ input:focus {
     line-height: 30px;
     text-align: center;
     background-color: white;
-    color: #28a2a2;
+    color: #C01F31;
     margin-top: 1px;
-    border-bottom:  1px solid #44aacc;
+    border-bottom:  1px solid #C01F31;
     height: 30px;
     width: 131px;
 }
@@ -204,7 +204,7 @@ input:focus {
     cursor: pointer;
     line-height: 30px;
     text-align: center;
-    background-color: #28a2a2;
+    background-color: #C01F31;
     color: white;
     margin-top: 1px;
     height: 30px;
@@ -216,7 +216,7 @@ input:focus {
     line-height: 30px;
     text-align: center;
     background-color: white;
-    color: #28a2a2;
+    color: #C01F31;
     margin-top: 1px;
     height: 30px;
     width: 140px;
@@ -226,26 +226,26 @@ input:focus {
 
 #input-DoB{
     border-bottom: none;
-    background-color: #28a2a2;
+    background-color: #C01F31;
     color: white;
     height: 41px;
 }
 #input-DoB:hover{
     background-color: white;
-    color: #28a2a2;
-    border: 1px solid #28a2a2;
+    color: #C01F31;
+    border: 1px solid #C01F31;
     height: 41px;
 }
 
 input::-webkit-calendar-picker-indicator{
-    color: #28a2a2;
-    border: 1px solid #28a2a2;
+    color: #C01F31;
+    border: 1px solid #C01F31;
     margin-right: 4px;
 }
 
 #input-DoB::-webkit-calendar-picker-indicator:hover{
     color: white;
-    background-color: #28a2a2;
+    background-color: #C01F31;
     margin-right: 4px;
 }
 #input-DoB::-webkit-search-cancel-button{
