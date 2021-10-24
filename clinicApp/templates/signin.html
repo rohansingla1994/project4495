@@ -97,19 +97,17 @@
             <div class="validationLabel" id="validationLabel"></div>
 
             <p class="input-container">
-                <input type="email" id="input-email" class="login-input" required>
-                <label for="input-email" unselectable="on" id="label-email">Email*</label>
+                <input type="email" id="input-email" class="login-input" placeholder="*Email" required>
             </p>
 
 
             <p class="input-container">
-                <input type="password" id="input-password" class="login-input" required>
-                <label for="input-password" unselectable="on" id="label-password">Password*</label>
+                <input type="password" id="input-password" class="login-input" placeholder="*Password" required>
             </p>
 
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-                <input type="submit" name="Sign Up" id="signUpButton" style="margin-top: 100px" onclick="Login()">
-                <button id="signUpButton" style="margin-top: 100px">Google SignIn</button>
+            <div style="display: flex;flex-direction: column;justify-content: center;">
+                <input type="submit" name="Sign Up" id="signUpButton"  onclick="Login()">
+                <input id="googleplus" type="button" value="Google +"/>
             </div>
 
 
@@ -117,7 +115,7 @@
 
         <div class="loginLine" style="margin-top: 50px">
             <p style="display: inline;color: #888888">Become a member. </p>
-            <a class="loginButton" href="signup.html" id="loginButton">Sign-Up</a>
+            <a class="loginButton" onclick="location.href='{% url 'signup' %}'" id="loginButton">Sign-Up</a>
         </div>
 
 

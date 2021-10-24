@@ -13,6 +13,7 @@
 
 </head>
 <body>
+
 <header>
     <div class="headerContainer" >
         <a onclick="location.href='{% url 'home' %}'"><div id="logo">
@@ -84,6 +85,7 @@
         </div>
     </div>
 </header>
+
 <div class="container"  style="padding: 50px 0 50px 0;">
     <div class="contentContainer">
 
@@ -95,8 +97,9 @@
         <form class="dataInput" onsubmit="return false">
             <div class="validationLabel" id="validationLabel"></div>
             <p class="input-container">
-                <input type="text" id="input-name" class="login-input" required>
-                <label for="input-name" unselectable="on" id="label-name">Name*</label>
+
+                <input type="text" id="input-name" class="login-input" placeholder="*Name" required>
+
             </p>
             <div class="flex-horizontal" style="margin-top: 10px">
                 <div id="gender">
@@ -108,47 +111,50 @@
 
                     </div>
                 </div>
+                <div id="person">
+                    <div id="personButton">Select Type</div>
+                    <div id="personBlock">
+                        <div class="genderOption" onclick="selectPerson('Patient')">Patient</div>
+                        <div class="genderOption" onclick="selectPerson('Doctor')">Doctor</div>
+
+                    </div>
+                </div>
                 <input type="date" id="input-DoB">
             </div>
 
             <p class="input-container">
-                <input type="email" id="input-email" class="login-input" required>
-                <label for="input-email" unselectable="on" id="label-email">Email*</label>
+                <input type="email" id="input-email" class="login-input" placeholder="*Email" required>
             </p>
 
             <div class="flex-horizontal">
                 <p class="input-container">
-                    <input type="password" id="input-password" class="login-input" required>
-                    <label for="input-password" unselectable="on" id="label-password">Password*</label>
+                    <input type="password" id="input-password" class="login-input" placeholder="*Password" required>
                 </p>
                 <p class="input-container">
-                    <input type="password" id="input-confirmPassword" class="login-input" required>
-                    <label for="input-confirmPassword" unselectable="on" id="label-confirmPassword">Confirm Password*</label>
+                    <input type="password" id="input-confirmPassword" class="login-input" placeholder="*Confirm Password" required>
                 </p>
             </div>
             <p class="input-container">
-                <input type="number" id="input-phNo" class="login-input" data-inputmask="'mask': '(999) 999-9999'" required>
-                <label for="input-phNo" unselectable="on" id="label-phNo">Phone No.*</label>
+                <input type="number" id="input-phNo" class="login-input" data-inputmask="'mask': '(999) 999-9999'" placeholder="*Phone No." required>
             </p>
             <p class="input-container">
-                <input type="text" id="input-adLine1" class="login-input" required>
-                <label for="input-adLine1" unselectable="on" id="label-adLine1">Address Line 1*</label>
+                <input type="text" id="input-adLine1" class="login-input" placeholder="*Address Line 1" required>
             </p>
             <p class="input-container">
-                <input type="text" id="input-adLine2" class="login-input">
-                <label for="input-adLine2" unselectable="on" id="label-adLine2">Address Line 2</label>
+                <input type="text" id="input-adLine2" class="login-input" placeholder="Address Line 2">
             </p>
             <input type="submit" name="Sign Up" id="signUpButton" onclick="Signup()">
         </form>
 
         <div class="loginLine">
             <p style="display: inline;color: #888888">Already a member? </p>
-            <a class="loginButton" href="signin.html" id="loginButton">Log-In</a>
+            <a class="loginButton" onclick="location.href='{% url 'signin' %}'" id="loginButton">Log-In</a>
         </div>
 
     </div>
 
 </div>
+
 <script src="js/LS.js"></script>
 
 </body>

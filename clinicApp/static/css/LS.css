@@ -135,6 +135,29 @@ input:focus {
     align-self: center;
     margin: 20px 0 0 0;
 }
+#googleplus{
+    background-color: #C01F31;
+    color: white;
+    width: 100px;
+    margin: 20px 0 0 0;
+    align-self: center;
+}
+#googleplus:hover{
+    border: 1px solid #C01F31;
+    background-color: white;
+    width: 130px;
+    color: #C01F31;
+    align-self: center;
+    margin: 20px 0 0 0;
+}
+#googleplus:active{
+    background-color: #C01F31;
+    color: white;
+    width: 150px;
+    align-self: center;
+    margin: 20px 0 0 0;
+}
+
 .loginLine{
     align-self: center;
     margin: 40px
@@ -147,10 +170,6 @@ input:focus {
 
 #gender{
     width: 300px;
-}
-#input-DoB{
-    margin: 0 0 0 120px;
-    padding: 0 0 0 10px;
 }
 
 #genderButton{
@@ -223,6 +242,52 @@ input:focus {
     transition: 0.2s;
 
 }
+#person{
+    width: 300px;
+}
+
+#personButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C01F31;
+    color: white;
+    height: 41px;
+    width: 131px;
+    cursor: pointer;
+    transition: 0.6s;
+
+
+}
+
+#personButton:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #C01F31;
+    height: 41px;
+    width: 131px;
+    cursor: pointer;
+}
+
+#personBlock{
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+}
+
+#person:hover #personBlock{
+    display: block;
+}
+
+#input-DoB{
+    margin: 0 0 0 0px;
+    padding: 0 0 0 10px;
+}
+
+
 
 #input-DoB{
     border-bottom: none;
@@ -257,9 +322,9 @@ input::-webkit-calendar-picker-indicator{
 visibility: hidden;
 }
 #validationLabel{
-    color: #ff253a;
+    color: #ff9100;
 }
 
 .redLabel{
-    color:#ff253a;
+    color:#ff9100;
 }
