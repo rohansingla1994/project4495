@@ -6,6 +6,7 @@ var month = calender.getMonth();
 var date = calender.getDate();
 var fullDate = year + "-" + month + "-" + date;
 
+
 function Signup() {
     console.log("Signup");
     if (typeof (Storage) !== "undefined") {
@@ -47,6 +48,9 @@ function FetchHtml() {
     userYear = parseInt(date[0]);
     console.log(userYear);
 
+
+
+
     Validation();
 }
 
@@ -58,6 +62,7 @@ function SendHtml() {
 }
 
 function selectGender(gender) {
+    console.log("gender");
     document.getElementById("genderButton").innerHTML = gender;
     userGender = gender;
     document.getElementById("genderButton").style.color = "#ffffff";
@@ -274,9 +279,15 @@ function Validation() {
 
 function JSON_Data(data) {
 
-    // if email exists
-
-    // then store data in firebase
-
+$.ajax({
+        url: '/ajax/getjson/',
+        data:data,
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+            alert("A user with this username already exists.");
+          }
+        }
+      });
 }
 

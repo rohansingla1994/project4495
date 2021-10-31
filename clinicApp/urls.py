@@ -9,5 +9,8 @@ urlpatterns = [
     path('lifestyle/', views.lifestyle, name='lifestyle'),
     path('statistics/', views.statistics, name='statistics'),
     path('signup/', views.signup, name='signup'),
-    path('signin/', views.signin, name='signin')
+    path('signin/', views.signin, name='signin'),
+    path(r'ajax/getjson/', views.getjson, name='getjson'),
+    path(r'ajax/signin/', views.getsignin, name='getsignin')
+
 ]

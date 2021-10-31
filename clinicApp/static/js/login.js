@@ -25,64 +25,18 @@ function FetchHtml() {
 }
 
 function Validation() {
+    console.log("kbkbvkdsvbdisbvdsvbdss")
 
-
-
-    if( userEmail.val()===""){
-
-        document.getElementById("label-email").style.color = "#ff253a";
-    }
-
-    if( userEmail.val()!=="" && userPassword.val()===""){
-
-        //Remove validation red
-
-        document.getElementById("label-email").style.color = "#ccc";
-
-        //Add validation red
-
-        document.getElementById("label-password").style.color = "#ff253a";
-    }
-
-    if( userEmail.val()!=="" && userPassword.val()!==""){
-
-        //Remove validation red
-
-
-        document.getElementById("label-password").style.color = "#ccc";
-
-        var data=localStorage.getItem(userEmail.val());
-        var jsonData=JSON.parse(data);
-
-        if(jsonData===null){
-            document.getElementById("label-password").style.color = "#ff253a";
-            document.getElementById("label-email").style.color = "#ff253a";
-            document.getElementById("validationLabel").innerHTML="Email or Password is incorrect";
-            return;
+    $.ajax({
+        url: '/ajax/signin/',
+        data:data,
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+            alert("Successfully Logged in ");
+          }
         }
-
-        var email=jsonData.userEmail;
-
-
-
-        var password=jsonData.userPassword;
-
-        if(email===userEmail.val() && password===userPassword.val()){
-
-            document.getElementById("label-password").style.color = "#ccc";
-            document.getElementById("label-email").style.color = "#ccc";
-            document.getElementById("validationLabel").innerHTML="";
-
-            SendHtml()
-        }
-        else{
-            document.getElementById("label-password").style.color = "#ff253a";
-            document.getElementById("label-email").style.color = "#ff253a";
-            document.getElementById("validationLabel").innerHTML="Email or Password is incorrect";
-        }
-
-    }
-
+      });
 
 
 }
