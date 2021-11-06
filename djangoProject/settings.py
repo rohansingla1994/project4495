@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'clinicApp.apps.ClinicappConfig',
-    'REST_framework',
-    'firebase_auth'
+
 
 ]
 

@@ -1,8 +1,7 @@
 import pyrebase
 from django.http import JsonResponse
 from django.contrib.auth.models import User
-import firebase_admin
-from firebase_admin import credentials
+
 from firebase_admin.auth import UserNotFoundError, ExpiredIdTokenError
 
 
@@ -21,11 +20,8 @@ class firebaseconfig:
         self.firebase = pyrebase.initialize_app(firebaseConfig)
         self.database = self.firebase.database()
         self.auth = self.firebase.auth()
-        self.cred = credentials.Certificate({
 
-}
-)
-        firebase_admin.initialize_app(self.cred)
+
 
     def getjson(self, myjson3):
         email = myjson3.get("userEmail")
