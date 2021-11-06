@@ -1,5 +1,6 @@
 var userEmail, userPassword;
 
+
 function Login() {
     console.log("Login");
     if (typeof (Storage) !== "undefined") {
@@ -24,16 +25,23 @@ function FetchHtml() {
     Validation();
 }
 
-function Validation() {
-    console.log("kbkbvkdsvbdisbvdsvbdss")
 
+
+
+function Validation() {
+    console.log("qwerty")
+    var userData = {
+        "userEmail":userEmail.val(),
+        "userPassword":userPassword.val()
+    };
+    console.log(userData)
     $.ajax({
         url: '/ajax/signin/',
-        data:data,
+        data:userData,
         dataType: 'json',
         success: function (data) {
           if (data.is_taken) {
-            alert("Successfully Logged in ");
+            alert(data.return_msg);
           }
         }
       });

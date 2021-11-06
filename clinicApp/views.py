@@ -34,6 +34,10 @@ def signin(request):
     return render(request, 'signin.html')
 
 
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+
 def getjson(request):
     userEmail = request.GET.get('userEmail', None)
     userName = request.GET.get('userName', None)
@@ -71,9 +75,14 @@ def getjson(request):
 def getsignin(request):
     userEmail = request.GET.get('userEmail', None)
     userPassword = request.GET.get('userPassword', None)
+    print(userPassword)
     myjson3 = {'userEmail': userEmail,
                'userPassword': userPassword,
                }
-    obj2=fc.firebaseconfig()
-    obj2.signin(myjson3)
-    print("User successfully sign in")
+    obj2 = fc.firebaseconfig()
+    return_msg = obj2.signin(myjson3)
+    data = {
+        'is_taken': True,
+        'return_msg': return_msg
+    }
+    return JsonResponse(data)

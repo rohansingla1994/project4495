@@ -285,7 +285,7 @@ $.ajax({
         dataType: 'json',
         success: function (data) {
           if (data.is_taken) {
-            alert("A user with this username already exists.");
+            alert(data.return_msg);
           }
         }
       });
