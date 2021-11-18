@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+     <link rel="stylesheet" href="{% static 'library/font-awesome-4.7.0/css/font-awesome.css'%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/login.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/LS.css'%}">
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'css/utility.css'%}">
+    <link rel="stylesheet" href="{% static 'css/utility.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+    <title>Profile</title>
+
+</head>
+<body>
+<header>
+    <div class="headerContainer" >
+        <a onclick="location.href='{% url 'home' %}'"><div id="logo">
+            <img src="{% static 'images/logo.png'%}" alt="logo" id="logoImage">
+        </div></a>
+        <div id="bankName">
+            <div class="logoText primaryColor">Strive </div>
+            <div class="logoText secondaryColor">Health</div>
+        </div>
+    </div>
+    <div class="menuContainer">
+        <div id="menu">
+            <img src="{% static 'images/menu_secondary.png'%}" alt="menu" id="menuInActive" class="menuButton">
+            <img src="{% static 'images/menu_accent.png'%}" alt="menu" id="menuActive" class="menuButton">
+        </div>
+        {% load custom_tags %}
+        <div class="navContainer" >
+
+            <div class="navOptionContainer" id="homeOptionContainer">
+                <div id="homeOption" class="navOption" onclick="location.href='{% url 'dashboard_client' %}'">DashBoard</div>
+
+            </div>
+
+            <div class="navOptionContainer" id="loanOptionContainer">
+                <div id="loanOption" class="navOption" onclick="location.href='{% url 'chart' %}'">Chart</div>
+
+            </div>
+
+            <div class="navOptionContainer" id="creditCardsOptionContainer">
+                <div id="creditCardsOption" class="navOption" onclick="location.href='{% url 'drugstore' %}'">DrugStore</div>
+
+            </div>
+
+            <div class="navOptionContainer" id="insuranceOptionContainer">
+                <div id="insuranceOption" class="navOption" onclick="location.href='{% url 'client_profile' %}'">Profile</div>
+
+            </div>
+
+
+        </div>
+    </div>
+</header>
+<div class = "container" style="margin-top: 50px">
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+        <fieldset>
+
+            <!-- Form Name -->
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Full Name</label>
+                <label class="row-md-4 control-label">First Name</label>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">E-mail id</label>
+                <label class="row-md-4 control-label"> Customer's E-mail</label>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Disease</label>
+                <label class="row-md-4 control-label">Customer's Disease</label>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Doctor's Name</label>
+                <label class="row-md-4 control-label">Customer's Doctor's Name</label>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Previous Drugs</label>
+                <label class="row-md-4 control-label">Previous Drugs Names</label>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Change PAssword</label>
+                <label class="row-md-4 control-label">New Password</label>
+            </div>
+
+
+
+            <!-- Success message -->
+            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+            <!-- Button -->
+            <div class="d-flex align-items-center" style="justify-content: center">
+
+
+                    <div class="p-1">
+               <button type="submit" class="btn btn-warning" >Edit Profile<span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+
+
+                    <div class="p-1"  >
+                       <button type="submit" class="btn btn-warning" >Save <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+
+
+            </div>
+
+
+
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

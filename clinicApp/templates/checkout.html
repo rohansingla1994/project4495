@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css'%}">
+ <script src="{% static 'js/checkout.js'%}"></script>
+</head>
+<body>
+
+<section class="flex-row" id="store_section">
+
+    <div class="flex-row main-section" style="padding: 30px">
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Statins</b></h4>
+                <p>$3 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-1','i-1')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+           <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Aspirin</b></h4>
+                <p>$1 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-2','i-2')" >add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Clopidogrel</b></h4>
+                <p>$3 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-3','i-3')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+           <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Warfarin</b></h4>
+                <p>$2 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-4','i-4')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+           <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Beta-blockers</b></h4>
+                <p>$6 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-5','i-5')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>ACE inhibitors</b></h4>
+                <p>$10 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-6','i-6')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Anticoagulants</b></h4>
+                <p>$3 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-7','i-7')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Antiplatelet</b></h4>
+                <p>$1 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-8','i-8')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>tPA</b></h4>
+                <p>$3 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-9','i-9')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Atrial Fibrillation</b></h4>
+                <p>$2 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-10','i-10')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Tambocor</b></h4>
+                <p>$6 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-11','i-11')">add</Button></p>
+
+            </div>
+        </div>
+        <div class="card card-item">
+
+            <img class="card-image" src="{% static 'res/lipitor.jpg'%}" alt="Avatar">
+            <div class="container">
+                <h4><b>Zoloft</b></h4>
+                <p>$10 <small style="color: gray">/1 pc</small><Button class="card-item-button" onclick="card_item('li-12','i-12')">add</Button></p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="side-bar flex-col">
+        <ul class="order-list flex-col" id="order-list">
+            <li class="order-item flex-row" id="li-1" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-1','i-1')">&odash;</div>
+                <div class="flex-row"><b>Statins</b></div>
+                <label>
+                    <input id='i-1' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-1','i-1')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-2" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-2','i-2')">&odash;</div>
+                <div class="flex-row"><b>Aspirin</b></div>
+                <label>
+                    <input id='i-2' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-2','i-2')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-3" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-3','i-3')">&odash;</div>
+                <div class="flex-row"><b>Clopidogrel</b></div>
+                <label>
+                    <input id='i-3' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-3','i-3')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-4" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-4','i-4')">&odash;</div>
+                <div class="flex-row"><b>Warfarin</b></div>
+                <label>
+                    <input id='i-4' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-4','i-4')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-5" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-5','i-5')">&odash;</div>
+                <div class="flex-row"><b>Beta-blockers</b></div>
+                <label>
+                    <input id='i-5' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-5','i-5')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-6" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-6','i-6')">&odash;</div>
+                <div class="flex-row"><b>ACE inhibitors</b></div>
+                <label>
+                    <input id='i-6' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-6','i-6')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-7" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-7','i-7')">&odash;</div>
+                <div class="flex-row"><b>Anticoagulants</b></div>
+                <label>
+                    <input id='i-7' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-7','i-7')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-8" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-8','i-8')">&odash;</div>
+                <div class="flex-row"><b>Antiplatelet</b></div>
+                <label>
+                    <input id='i-8' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-8','i-8')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-9" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-9','i-9')">&odash;</div>
+                <div class="flex-row"><b>tPA</b></div>
+                <label>
+                    <input id='i-9' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-9','i-9')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-10" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-10','i-10')">&odash;</div>
+                <div class="flex-row"><b>Atrial Fibrillation</b></div>
+                <label>
+                    <input id='i-10' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-10','i-10')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-11" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-11','i-11')">&odash;</div>
+                <div class="flex-row"><b>Tambocor</b></div>
+                <label>
+                    <input id='i-11' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-11','i-11')"/>
+                </label>
+            </li>
+            <li class="order-item flex-row" id="li-12" style="display: none;">
+                <div style="color: #b71c1c;cursor: pointer;" onclick="item_hide('li-12','i-12')">&odash;</div>
+                <div class="flex-row"><b>Zoloft</b></div>
+                <label>
+                    <input id='i-12' type="number" value="0" style="width: 50px;" min="0" onchange="total_label('li-12','i-12')"/>
+                </label>
+            </li>
+
+        </ul>
+        <div class="total" id="total">$0</div>
+        <button class="checkout-button" id="checkout-button">Checkout</button>
+    </div>
+</section>
+</body>
+</html>
