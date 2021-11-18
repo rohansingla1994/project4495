@@ -24,9 +24,27 @@ def statistics(request):
     return render(request, 'statistics.html')
 
 
+#def signup(request):
+   # return render(request, 'signup.html')
+
 def signup(request):
-    return render(request, 'signup.html')
+    return  render(request,'stroke.html')
 
 
 def signin(request):
     return render(request, 'signin.html')
+
+def client_Dashboard(request):
+    return render(request, 'client_Dashboard.html')
+
+def chart(request):
+    return render(request, 'chart.html')
+
+def drugstore(request):
+    return render(request, 'checkout.html')
+
+def client_profile(request):
+    return render(request, 'patientProfile.html')
+
+
+
