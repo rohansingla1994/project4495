@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from clinicApp.DataProcessing import firebaseclass as fc
 
 
 # Create your views here.
@@ -31,24 +32,37 @@ def signup(request):
 def signin(request):
     return render(request, 'signin.html')
 
+
+def heartinfo(request):
+    return render(request, 'heartinfo.html')
+
+
+def stroke(request):
+    return render(request, 'stroke.html')
+
+
 def client_Dashboard(request):
     return render(request, 'client_Dashboard.html')
+
 
 def chart(request):
     return render(request, 'chart.html')
 
+
 def drugstore(request):
     return render(request, 'checkout.html')
+
 
 def client_profile(request):
     return render(request, 'patientProfile.html')
 
 
-
-
-
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+
+def disease(request):
+    return render(request, 'selectDisease.html')
 
 
 def getjson(request):
@@ -98,4 +112,5 @@ def getsignin(request):
         'is_taken': True,
         'return_msg': return_msg
     }
+
     return JsonResponse(data)

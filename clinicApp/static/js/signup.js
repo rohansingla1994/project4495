@@ -31,6 +31,7 @@ function SetData() {
         "userInterestRate":0,
     };
     JSON_Data(userData)
+    localStorage.setItem(userEmail,JSON.stringify(userData));
     SendHtml();
 }
 
@@ -290,4 +291,36 @@ $.ajax({
         }
       });
 }
+function checkStorage() {
+    console.log("Check Storage");
+    if (typeof (Storage) !== "undefined") {
+        return true;
+    } else {
+        Console.log("Sorry! No Web Storage support..");
+        return false;
+    }
+}
+
+function getEmail() {
+    userEmail=sessionStorage.getItem("currentUser");
+    if(userEmail===null){
+        userEmail="email";
+        return false
+    }
+    return true;
+}
+function getData() {
+    if (checkStorage() === false) {
+        return;
+    }
+    getEmail();
+    if (getEmail()===true){
+        var data = localStorage.getItem(email);
+        jsonData = JSON.parse(data);
+
+    }
+
+
+}
+
 

@@ -34,7 +34,9 @@ function SetData() {
 
     };
     console.log(userData);
+
     JSON_Data(userData)
+     localStorage.setItem(userEmail,JSON.stringify(userData));
 
 }
 
@@ -63,5 +65,26 @@ function JSON_Data(data) {
     // if email exists
 
     // then store data in firebase
+
+}
+function getEmail() {
+    userEmail=sessionStorage.getItem("currentUser");
+    if(userEmail===null){
+        userEmail="email";
+        return false
+    }
+    return true;
+}
+function getData() {
+    if (checkStorage() === false) {
+        return;
+    }
+    getEmail();
+    if (getEmail()===true){
+        var data = localStorage.getItem(email);
+        jsonData = JSON.parse(data);
+
+    }
+
 
 }

@@ -19,7 +19,7 @@
         .disease{
             background-color: #f1f1f1;
 
-            width: 300px;
+            width: 500px;
             height: 300px;
             margin: 10px;
             text-align: center;
@@ -29,7 +29,7 @@
             margin-top: 50px;
         }
         .images{
-            width: 300px;
+            width: 500px;
             height: 300px;
             border: 1px solid black;
         }
@@ -86,11 +86,11 @@
 
 
         <div class="disease" >
-            <img  class = "images" src="{% static 'res/stroke.jpg'%}">
+            <img  class = "images" src="{% static 'res/stroke.jpg'%} " onclick="location.href='{% url 'heartinfo' %}'">
             <p style="color: black">Stroke</p>
         </div>
         <div class="disease">
-            <img  class = "images" src="{% static 'res/heart.jpg'%}">
+            <img  class = "images" src="{% static 'res/heart.jpg'%}" onclick="location.href='{% url 'stroke' %}'">
             <p style="color: black">Heart Attack</p>
         </div>
     </div>

@@ -1,11 +1,13 @@
 import pyrebase
-from django.http import JsonResponse
+from django.http import JsonResponse, request , HttpResponseRedirect
 from django.contrib.auth.models import User
+import requests
 
 from firebase_admin.auth import UserNotFoundError, ExpiredIdTokenError
 
 
 class firebaseconfig:
+
 
     def __init__(self):
         firebaseConfig = {'apiKey': "AIzaSyBRAmbOE0Je6pYBet1poJrssEgVHIy79Wk",
@@ -23,6 +25,7 @@ class firebaseconfig:
 
 
 
+
     def getjson(self, myjson3):
         email = myjson3.get("userEmail")
         key = self.emailfetching(email)
@@ -36,11 +39,14 @@ class firebaseconfig:
         return updatedemail
 
     def signin(self, myjson3):
+
         email = myjson3.get("userEmail")
         password = myjson3.get("userPassword")
         try:
             self.auth.sign_in_with_email_and_password(email, password)
+           # return HttpResponseRedirect('https://www.google.com/')
             return "Loggeg in"
+
         except:
             return "invalid User details"
 

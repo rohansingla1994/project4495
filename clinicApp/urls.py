@@ -10,11 +10,13 @@ urlpatterns = [
     path('statistics/', views.statistics, name='statistics'),
     path('signup/', views.signup, name='signup'),
     path('signin/', views.signin, name='signin'),
-    #path('heartinfo',views.heartinfo, name = 'heartinfo')
+    path('heartinfo', views.heartinfo, name='heartinfo'),
+    path('stroke', views.stroke, name='stroke'),
     path('dashboard_client/', views.client_Dashboard, name='dashboard_client'),
     path('chart_client/', views.chart, name='chart'),
     path('drugstore/', views.drugstore, name='drugstore'),
     path('client_profile/', views.client_profile, name='client_profile'),
+    path('disease/', views.disease, name='disease'),
 
     path('signin/', views.signin, name='signin'),
     path(r'ajax/getjson/', views.getjson, name='getjson'),

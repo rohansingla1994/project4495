@@ -42,6 +42,12 @@ function Validation() {
         success: function (data) {
           if (data.is_taken) {
             alert(data.return_msg);
+            if(data.return_msg==="Loggeg in"){
+                var ar = window.location.origin+'/disease/';
+                console.log(ar)
+                location.href= ar;e
+
+            }
           }
         }
       });
