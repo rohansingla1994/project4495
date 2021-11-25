@@ -3,6 +3,7 @@ var userEmail, userPassword;
 
 function Login() {
     console.log("Login");
+    console.log(sessionStorage.getItem('userName'))
     if (typeof (Storage) !== "undefined") {
         FetchHtml();
     } else {
@@ -32,7 +33,8 @@ function Validation() {
     console.log("qwerty")
     var userData = {
         "userEmail":userEmail.val(),
-        "userPassword":userPassword.val()
+        "userPassword":userPassword.val(),
+
     };
     console.log(userData)
     $.ajax({
@@ -44,6 +46,10 @@ function Validation() {
             alert(data.return_msg);
             if(data.return_msg==="Loggeg in"){
                 var ar = window.location.origin+'/disease/';
+                var splitEmail = userEmail.val().split('@')[0];
+                sessionStorage.setItem('userName',splitEmail)
+
+
                 console.log(ar)
                 location.href= ar;e
 

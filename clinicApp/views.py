@@ -114,3 +114,40 @@ def getsignin(request):
     }
 
     return JsonResponse(data)
+
+
+def getHeart(request):
+    key = request.GET.get('userName', None)
+    userAge = request.GET.get('userAge', None)
+    userGender = request.GET.get('userGender', None)
+    heartDisease = request.GET.get('heartDisease', None)
+    hypertension = request.GET.get('hypertension', None)
+    married = request.GET.get('married', None)
+    employment = request.GET.get('employment', None)
+    smoking = request.GET.get('smoking', None)
+    gulucose = request.GET.get('gulucose', None)
+    bodyMassIndex = request.GET.get('bodyMassIndex', None)
+
+    myJson4 = {'userAge': userAge,
+               'userGender': userGender,
+               'heartDisease': heartDisease,
+               'hypertension': hypertension,
+               'married': married,
+               'employment': employment,
+               'smoking': smoking,
+               'gulucose': gulucose,
+               'bodyMassIndex': bodyMassIndex,
+               'userName': key
+
+               }
+
+    data = {
+        'is_taken': True
+    }
+    obj = fc.firebaseconfig()
+
+
+    print(key)
+    obj.set_data(key, "heartData", myJson4)
+
+    return JsonResponse(data)

@@ -20,6 +20,7 @@ urlpatterns = [
 
     path('signin/', views.signin, name='signin'),
     path(r'ajax/getjson/', views.getjson, name='getjson'),
+    path(r'ajax/getHeart/', views.getHeart, name='getHeart'),
     path(r'ajax/signin/', views.getsignin, name='getsignin'),
     path('dashboard/', views.dashboard, name='dashboard')
 

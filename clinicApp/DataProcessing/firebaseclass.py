@@ -23,7 +23,10 @@ class firebaseconfig:
         self.database = self.firebase.database()
         self.auth = self.firebase.auth()
 
-
+    def returnKey(self, myjson3):
+        email = myjson3.get("userEmail")
+        key = self.emailfetching(email)
+        return key
 
 
     def getjson(self, myjson3):
@@ -32,6 +35,7 @@ class firebaseconfig:
         password = myjson3.get("userPassword")
         user = self.auth.create_user_with_email_and_password(email, password)
         self.database.child(key).set(myjson3)
+
 
     def emailfetching(self, email):
         updatedemail = email.split("@")[0]
@@ -49,6 +53,10 @@ class firebaseconfig:
 
         except:
             return "invalid User details"
+
+    def set_data(self, id, child, data):
+
+        self.database.child(id).child(child).push(data)
 
 
 

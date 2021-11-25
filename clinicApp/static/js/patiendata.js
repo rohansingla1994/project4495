@@ -12,12 +12,13 @@ var bodyMassIndex;
 
 
 
+
 function Signup() {
 
     console.log("Signup");
    FetchHtml();
    SetData();
-   JSON_Data(userData);
+
 }
 
 function SetData() {
@@ -34,12 +35,13 @@ function SetData() {
         'userAge':userAge.val(),
         'gulucose':gulucose.val(),
         'bodyMassIndex': bodyMassIndex.val(),
+        'userName': sessionStorage.getItem('userName')
 
     };
        console.log(userData);
+
     JSON_Data(userData);
 
-    SendHtml();
 }
 
 function FetchHtml() {
@@ -55,12 +57,6 @@ function FetchHtml() {
 
 
 
-function SendHtml() {
-    console.log("SendHtml");
-    alert("Thanks for Registering");
-    window.open("signin.html","_self");
-
-}
 
 function selectGender(gender) {
     console.log("heartDisease");
@@ -138,6 +134,16 @@ function JSON_Data(data) {
     // if email exists
 
     // then store data in firebase
+    $.ajax({
+        url: '/ajax/getHeart/',
+        data:data,
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+            alert(data.return_msg);
+          }
+        }
+      });
 
 }
 
