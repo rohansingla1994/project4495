@@ -28,6 +28,7 @@ function SetData() {
          'serum_sodium':serum_sodium.val(),
          'time':time.val(),
          'saturation':saturation.val(),
+         'userName': sessionStorage.getItem('userName')
 
 
 
@@ -60,13 +61,6 @@ function FetchHtml() {
 
 
 
-function JSON_Data(data) {
-
-    // if email exists
-
-    // then store data in firebase
-
-}
 function getEmail() {
     userEmail=sessionStorage.getItem("currentUser");
     if(userEmail===null){
@@ -86,5 +80,23 @@ function getData() {
 
     }
 
+
+}
+
+function JSON_Data(data) {
+
+    // if email exists
+
+    // then store data in firebase
+    $.ajax({
+        url: '/ajax/getStroke/',
+        data:data,
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+            alert(data.return_msg);
+          }
+        }
+      });
 
 }

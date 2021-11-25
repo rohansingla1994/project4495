@@ -147,7 +147,50 @@ def getHeart(request):
     obj = fc.firebaseconfig()
 
 
-    print(key)
     obj.set_data(key, "heartData", myJson4)
 
     return JsonResponse(data)
+
+
+def getStroke(request):
+    key=request.GET.get('userName',None)
+    userAge = request.GET.get('userAge', None)
+    anamemia = request.GET.get('anamemia', None)
+    creatinine = request.GET.get('creatinine', None)
+    ejection_fraction = request.GET.get('ejection_fraction', None)
+    platelets = request.GET.get('platelets', None)
+    serum_ceratnine = request.GET.get('serum_ceratnine', None)
+    serum_sodium = request.GET.get('serum_sodium', None)
+    time = request.GET.get('time', None)
+    saturation = request.GET.get('saturation', None)
+
+    myJson5 = {'userAge': userAge,
+               'anamemia': anamemia,
+               'creatinine': creatinine,
+               'ejection_fraction': ejection_fraction,
+               'platelets': platelets,
+               'serum_ceratnine': serum_ceratnine,
+               'serum_sodium': serum_sodium,
+               'time': time,
+               'saturation': saturation,
+               'userName': key
+
+               }
+
+    data = {
+        'is_taken': True
+    }
+
+    obj = fc.firebaseconfig()
+    obj.set_data(key, "Strokedata", myJson5)
+    abc=obj.getdata(key)
+    print(abc.val())
+
+
+    return JsonResponse(data)
+
+
+
+
+
+

@@ -59,5 +59,11 @@ class firebaseconfig:
         self.database.child(id).child(child).push(data)
 
 
+    def getdata(self,id):
+        users = self.database.child(id).get()
+        return users
+
+
+
 
 
